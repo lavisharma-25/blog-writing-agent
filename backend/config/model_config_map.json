@@ -1,0 +1,12 @@
+{
+    "opencode": {
+        "OPENAI_MODEL": "OPENCODE_MODEL",
+        "OPENAI_API_KEY": "OPENCODE_API_KEY",
+        "OPENAI_BASE_URL": "OPENCODE_BASE_URL"
+    },
+    "nvidia": {
+        "OPENAI_MODEL": "NVIDIA_MODEL",
+        "OPENAI_API_KEY": "NVIDIA_API_KEY",
+        "OPENAI_BASE_URL": "NVIDIA_BASE_URL"
+    }
+}
