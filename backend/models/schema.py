@@ -1,4 +1,4 @@
-from typing import List, Literal
+from typing import List, Literal, Optional
 from pydantic import BaseModel, Field
 
 
@@ -9,17 +9,39 @@ class Task(BaseModel):
     goal: str = Field(..., description="One sentence describing what the reader should be able to do/understand after this section.")
     bullets: List[str] = Field(...,
         min_length=3,
-        max_length=5,
-        description="3-5 concrete, non-overlapping subpoints to cover in this section.",
+        max_length=6,
+        description="3-6 concrete, non-overlapping subpoints to cover in this section.",
     )
-    target_words: int = Field(..., description="Target word count for this section (120-450).")
-    section_type: Literal["intro", "core", "examples", "checklist", "common_mistakes", "conclusion"] = Field(...,
-        description="Use 'common_mistakes' exactly once in the plan.",
-    )
+    target_words: int = Field(..., description="Target word count for this section (120-550).")
+
+    tags: List[str] = Field(default_factory=list)
+    requires_research: bool = False
+    requires_citations: bool = False
+    requires_code: bool = False
 
 
 class Plan(BaseModel):
     blog_title: str
-    audience: str = Field(..., description="Who this blog is for.")
-    tone: str = Field(..., description="Writing tone (e.g., practical, crisp).")
+    audience: str
+    tone: str
+    blog_kind: Literal["explainer", "tutorial", "news_roundup", "comparison", "system_design"] = "explainer"
+    constraints: List[str] = Field(default_factory=list)
     tasks: List[Task]
+
+
+class EvidenceItem(BaseModel):
+    title: str
+    url: str
+    published_at: Optional[str] = None  # keep if Tavily provides; DO NOT rely on it
+    snippet: Optional[str] = None
+    source: Optional[str] = None
+
+
+class RouterDecision(BaseModel):
+    needs_research: bool
+    mode: Literal["closed_book", "hybrid", "open_book"]
+    queries: List[str] = Field(default_factory=list)
+
+
+class EvidencePack(BaseModel):
+    evidence: List[EvidenceItem] = Field(default_factory=list)

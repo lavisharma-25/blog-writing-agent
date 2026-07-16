@@ -1,7 +1,8 @@
 from langgraph.graph import StateGraph, START, END
 
 from backend.models.state import State
-from backend.graph.nodes import (planner_node, fanout, writer_node, refiner_node)
+from backend.graph.routers import (route_next, fanout)
+from backend.graph.nodes import (router_node, researcher_node, planner_node, writer_node, refiner_node)
 
 
 # ==========================================================================
@@ -12,6 +13,8 @@ graph = StateGraph(State)
 # ==========================================================================
 # Nodes
 # ==========================================================================
+graph.add_node("router_node", router_node)
+graph.add_node("researcher_node", researcher_node)
 graph.add_node("planner_node", planner_node)
 graph.add_node("writer_node", writer_node)
 graph.add_node("refiner_node", refiner_node)
@@ -19,7 +22,14 @@ graph.add_node("refiner_node", refiner_node)
 # ==========================================================================
 # Edges
 # ==========================================================================
-graph.add_edge(START, "planner_node")
+graph.add_edge(START, "router_node")
+graph.add_conditional_edges(
+    "router_node", route_next, {
+        "research": "researcher_node",
+        "orchestrator": "planner_node"
+    }
+)
+graph.add_edge("researcher_node", "planner_node")
 graph.add_conditional_edges("planner_node", fanout, ["writer_node"])
 graph.add_edge("writer_node", "refiner_node")
 graph.add_edge("refiner_node", END)
@@ -29,15 +39,25 @@ graph.add_edge("refiner_node", END)
 # ==========================================================================
 workflow = graph.compile()
 
-from openrouter.errors import TooManyRequestsResponseError
-
 try:
-    out = workflow.invoke(
-        # {"topic": "Write a blog on Self Attention", "sections": []}
-        {"topic": "Write a blog on Loop Engineering", "sections": []}
-    )
-    print(out)
+    def run_workflow(topic: str):
+        out = workflow.invoke(
+            {
+                "topic": topic,
+                "mode": "",
+                "needs_research": False,
+                "queries": [],
+                "evidence": [],
+                "plan": None,
+                "sections": [],
+                "final": "",
+            }
+        )
 
-except TooManyRequestsResponseError as e:
+        return out
+    
+    print(run_workflow("Write a blog on Loop Engineering in Agentic AI"))
+
+except Exception as e:
     print(e)
     print(vars(e))

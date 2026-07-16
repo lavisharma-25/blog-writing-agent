@@ -29,6 +29,11 @@ class Settings(BaseSettings):
     CUSTOM_PROVIDER: str | None = None  # "opencode" | "nvidia" | None - To use custom llm, set LLM_PROVIDER=openai
 
     # ==========================================================================
+    # Tavily
+    # ==========================================================================
+    TAVILY_API_KEY: str | None = None
+
+    # ==========================================================================
     # Gemini
     # ==========================================================================
     GOOGLE_MODEL: str = "gemini-2.5-flash"
