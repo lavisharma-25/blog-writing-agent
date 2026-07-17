@@ -38,26 +38,3 @@ graph.add_edge("refiner_node", END)
 # Workflow
 # ==========================================================================
 workflow = graph.compile()
-
-try:
-    def run_workflow(topic: str):
-        out = workflow.invoke(
-            {
-                "topic": topic,
-                "mode": "",
-                "needs_research": False,
-                "queries": [],
-                "evidence": [],
-                "plan": None,
-                "sections": [],
-                "final": "",
-            }
-        )
-
-        return out
-    
-    print(run_workflow("Write a blog on Loop Engineering in Agentic AI"))
-
-except Exception as e:
-    print(e)
-    print(vars(e))
