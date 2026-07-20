@@ -1,6 +1,6 @@
 from langgraph.types import Send
 
-from backend.models.state import State
+from src.models.state import State
 
 
 def fanout(state: State):

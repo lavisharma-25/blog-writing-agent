@@ -1,8 +1,8 @@
 from langgraph.graph import StateGraph, START, END
 
-from backend.models.state import State
-from backend.graph.routers import (route_next, fanout)
-from backend.graph.nodes import (router_node, researcher_node, planner_node, writer_node, refiner_node)
+from src.models.state import State
+from src.graph.routers import (route_next, fanout)
+from src.graph.nodes import (router_node, researcher_node, planner_node, writer_node, refiner_node)
 
 
 # ==========================================================================

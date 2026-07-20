@@ -1,6 +1,6 @@
 from langchain_core.prompts import ChatPromptTemplate
 
-from backend.core.settings import settings
+from src.core.settings import settings
 
 
 def load_prompt(

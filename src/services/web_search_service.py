@@ -1,7 +1,7 @@
 from typing import List
 from langchain_tavily import TavilySearch
 
-from backend.core.settings import settings
+from src.core.settings import settings
 
 
 def _tavily_search(query: str, max_results: int = 5) -> List[dict]:

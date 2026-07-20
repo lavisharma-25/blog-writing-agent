@@ -2,7 +2,7 @@ import operator
 from typing import List, Optional, Annotated
 from pydantic import BaseModel, Field
 
-from backend.models.schema import Plan, EvidenceItem
+from src.models.schema import Plan, EvidenceItem
 
 
 class State(BaseModel):

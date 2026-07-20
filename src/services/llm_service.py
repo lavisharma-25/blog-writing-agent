@@ -7,7 +7,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openrouter import ChatOpenRouter
 from langchain_openai import ChatOpenAI
 
-from backend.core.settings import settings
+from src.core.settings import settings
 
 
 class LLMService:

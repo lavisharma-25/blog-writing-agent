@@ -4,7 +4,7 @@ import uvicorn
 
 if __name__ == "__main__":
     uvicorn.run(
-        "backend.main:app",
+        "src.main:app",
         host=os.getenv("HOST", "0.0.0.0"),
         port=int(os.getenv("PORT", 5030)),
         reload=True,

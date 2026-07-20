@@ -1,4 +1,4 @@
-# backend/core/settings.py
+# src/core/settings.py
 
 import json
 from pathlib import Path
@@ -73,10 +73,10 @@ class Settings(BaseSettings):
     # Paths
     # ==========================================================================
     PROJECT_ROOT: Path = BASE_DIR
-    PROMPTS_DIR: Path = BASE_DIR / "backend" / "prompts"
+    PROMPTS_DIR: Path = BASE_DIR / "src" / "prompts"
     LOGS_DIR: Path = BASE_DIR / "LOGS"
     OUTPUT_DIR: Path = BASE_DIR / "output"
-    MODEL_CONFIG_PATH: Path = BASE_DIR / "backend" / "config" / "model_config_map.json"
+    MODEL_CONFIG_PATH: Path = BASE_DIR / "src" / "config" / "model_config_map.json"
 
 
     # ==========================================================================
