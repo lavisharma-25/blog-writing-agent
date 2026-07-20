@@ -1,6 +1,6 @@
 from langchain_core.prompts import ChatPromptTemplate
 
-from src.core.settings import settings
+from backend.src.core.settings import settings
 
 
 def load_prompt(
@@ -15,7 +15,7 @@ def load_prompt(
         human_template: Override human prompt if desired.
     """
 
-    agent_dir = settings.PROMPTS_DIR / agent
+    agent_dir = settings.PROMPTS_DIR / agent / "current"
 
     system_prompt = (agent_dir / "system.md").read_text(encoding="utf-8").strip()
 
