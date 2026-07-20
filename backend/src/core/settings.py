@@ -1,4 +1,4 @@
-# src/core/settings.py
+# backend/src/core/settings.py
 
 import json
 from pathlib import Path
@@ -6,7 +6,8 @@ from functools import lru_cache
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parents[3]
+# print(BASE_DIR)
 
 class Settings(BaseSettings):
     """Application Settings."""
