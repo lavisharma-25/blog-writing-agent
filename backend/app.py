@@ -1,11 +1,12 @@
-# app.py
-import os
 import uvicorn
+
+from backend.src.core.settings import settings
+
 
 if __name__ == "__main__":
     uvicorn.run(
         "backend.src.main:app",
-        host=os.getenv("HOST", "0.0.0.0"),
-        port=int(os.getenv("PORT", 5030)),
-        reload=True,
+        host="0.0.0.0",
+        port=settings.PORT,
+        reload=settings.RELOAD,
     )

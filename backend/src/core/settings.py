@@ -25,6 +25,8 @@ class Settings(BaseSettings):
     APP_NAME: str = "Blog Writing Agent"
     APP_VERSION: str = "1.0.0"
     ENV: str = "development"
+    PORT: int = 8080
+    RELOAD: bool = False
     DEBUG: bool = False
     LLM_PROVIDER: str = "gemini" # "gemini" | "openai" | "openrouter"
     CUSTOM_PROVIDER: str | None = None  # "opencode" | "nvidia" | None - To use custom llm, set LLM_PROVIDER=openai
