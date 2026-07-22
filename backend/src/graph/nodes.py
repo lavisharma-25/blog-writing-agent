@@ -23,7 +23,7 @@ def router_node(state: State) -> dict:
 
     decision = router_llm.invoke(messages)
 
-    print(f"\nRouter Node Response:\n{decision}")
+    # print(f"\nRouter Node Response:\n{decision}")
 
     print("============ Ending Router ============")
 
