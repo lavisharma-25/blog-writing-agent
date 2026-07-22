@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     HOST: str = "127.0.0.1"
     PORT: int = 8080
     RELOAD: bool = False
-    DEBUG: bool = False
+    LOG_LEVEL: str = "DEBUG" # "INFO" | "DEBUG"
     LLM_PROVIDER: str = "gemini" # "gemini" | "openai" | "openrouter"
     CUSTOM_PROVIDER: str | None = None  # "opencode" | "nvidia" | None - To use custom llm, set LLM_PROVIDER=openai
 
