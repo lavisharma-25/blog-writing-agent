@@ -25,6 +25,7 @@ class Settings(BaseSettings):
     APP_NAME: str = "Blog Writing Agent"
     APP_VERSION: str = "1.0.0"
     ENV: str = "development"
+    HOST: str = "127.0.0.1"
     PORT: int = 8080
     RELOAD: bool = False
     DEBUG: bool = False
