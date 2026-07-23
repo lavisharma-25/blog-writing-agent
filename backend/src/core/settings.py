@@ -29,8 +29,8 @@ class Settings(BaseSettings):
     PORT: int = 8080
     RELOAD: bool = False
     LOG_LEVEL: str = "DEBUG" # "INFO" | "DEBUG"
-    LLM_PROVIDER: str = "gemini" # "gemini" | "openai" | "openrouter"
-    CUSTOM_PROVIDER: str | None = None  # "opencode" | "nvidia" | None - To use custom llm, set LLM_PROVIDER=openai
+    LLM_PROVIDER: str = "openai" # "gemini" | "openai" | "openrouter"
+    CUSTOM_PROVIDER: str | None = None  # "opencode" | "groq" | "nvidia" | None - To use custom llm, set LLM_PROVIDER=openai
 
     # ==========================================================================
     # Tavily
@@ -60,11 +60,18 @@ class Settings(BaseSettings):
     OPENROUTER_API_KEY: str
     
     # ==========================================================================
-    # Hugging Face
+    # OpenCode
     # ==========================================================================
-    OPENCODE_MODEL: str | None = None
+    OPENCODE_MODEL: str = "deepseek-v4-flash-free"
     OPENCODE_API_KEY: str | None = None
     OPENCODE_BASE_URL: str | None = None
+
+    # ==========================================================================
+    # Groq
+    # ==========================================================================
+    GROQ_MODEL: str = "openai/gpt-oss-20b"
+    GROQ_API_KEY: str | None = None
+    GROQ_BASE_URL: str | None = None
 
     # ==========================================================================
     # Nvidia
