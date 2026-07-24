@@ -80,3 +80,9 @@ class WorkflowResponse(BaseModel):
 
     success: bool
     data: dict
+
+
+class GetLogsRequest(BaseModel):
+    """Request payload for retrieving log files or log content."""
+    
+    value: str = ""
