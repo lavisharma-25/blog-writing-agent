@@ -9,4 +9,4 @@ app = FastAPI(
     version=settings.APP_VERSION
 )
 
-app.include_router(api_router, prefix="/api/v1")
+app.include_router(api_router, prefix="/api")
