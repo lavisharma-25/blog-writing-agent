@@ -1,5 +1,3 @@
-# backend/src/core/settings.py
-
 import json
 from pathlib import Path
 from functools import lru_cache
@@ -89,6 +87,12 @@ class Settings(BaseSettings):
     LOGS_DIR: Path = BASE_DIR / "LOGS"
     OUTPUT_DIR: Path = BASE_DIR / "output"
 
+    # def blog_path(self, blog_id: str) -> Path:
+    #     return self.OUTPUT_DIR / f"{_safe_blog_id(blog_id)}.md"
+
+    def metadata_path(self, blog_id: str) -> Path:
+        return self.OUTPUT_DIR / f"{blog_id}.json"
+
     # ==========================================================================
     # Directory Management
     # ==========================================================================
@@ -130,7 +134,6 @@ class Settings(BaseSettings):
                 f"Model configuration file not found: {self.MODEL_CONFIG_PATH}"
             )
 
-        print("=== USING CUSTOM MODEL CONFIG ===")
 
         mapping: dict[str, dict[str, str]] = json.loads(
             self.MODEL_CONFIG_PATH.read_text()
