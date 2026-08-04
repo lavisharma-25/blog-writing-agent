@@ -1,0 +1,167 @@
+{
+  "blog_id": "20260804-095621-35a966b8-8a1b-5520-a503-3e9d959a2821",
+  "updated_at": "2026-08-04T15:26:21",
+  "title": "How to Create and Launch an AWS EC2 Instance: A Step-by-Step Guide from Start to Finish",
+  "filename": "how_to_create_and_launch_an_aws_ec2_instance_a_step-by-step_guide_from_start_to_finish.md",
+  "created_at": "2026-08-04T15:26:21",
+  "topic": "Do proper research and give steps on how to create and start a EC2 instance in AWS from the start to end in detail.",
+  "audience": "beginner",
+  "tone": "technical",
+  "blog_kind": "explainer",
+  "research_mode": "auto",
+  "include_images": false,
+  "output_format": "md",
+  "mode": "hybrid",
+  "needs_research": true,
+  "queries": [
+    "how to create EC2 instance AWS step by step 2025",
+    "AWS EC2 launch instance tutorial latest console",
+    "EC2 instance setup guide including key pair and security group",
+    "AWS EC2 creation steps official documentation",
+    "how to start EC2 instance and connect SSH",
+    "EC2 instance launch wizard details",
+    "AWS EC2 instance setup best practices 2025"
+  ],
+  "sources": [
+    {
+      "title": "Tutorial 1: Launch my very first Amazon EC2 instance",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/tutorial-launch-my-first-ec2-instance.html",
+      "published_at": null,
+      "snippet": "Official tutorial for launching a free-tier EC2 instance through the AWS Management Console.",
+      "source": "AWS Documentation"
+    },
+    {
+      "title": "Launch an Amazon EC2 instance",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/LaunchingAndUsingInstances.html",
+      "published_at": null,
+      "snippet": "Describes EC2 launch concepts, free tier, and ways to launch instances using the console, CLI, and other tools.",
+      "source": "AWS Documentation"
+    },
+    {
+      "title": "Get started with Amazon EC2",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html",
+      "published_at": null,
+      "snippet": "Steps to get started with EC2, including connecting to Linux or Windows instances.",
+      "source": "AWS Documentation"
+    },
+    {
+      "title": "Launch an EC2 instance using the launch instance wizard in the console",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html",
+      "published_at": null,
+      "snippet": "Explains how to launch an instance using the EC2 launch wizard, including selecting an AMI and key pair.",
+      "source": "AWS Documentation"
+    },
+    {
+      "title": "Getting Started with Amazon EC2",
+      "url": "https://aws.amazon.com/ec2/getting-started",
+      "published_at": null,
+      "snippet": "AWS guide covering instance selection, launching, connecting, and terminating an EC2 instance.",
+      "source": "Amazon Web Services"
+    },
+    {
+      "title": "Amazon EC2 key pairs and Amazon EC2 instances",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html",
+      "published_at": null,
+      "snippet": "Explains key pairs used to securely connect to EC2 instances.",
+      "source": "AWS Documentation"
+    },
+    {
+      "title": "Create a key pair for your Amazon EC2 instance",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html",
+      "published_at": null,
+      "snippet": "Shows how to create a key pair and save the private key file.",
+      "source": "AWS Documentation"
+    },
+    {
+      "title": "Connect to a Linux instance using EC2 Instance Connect",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html",
+      "published_at": null,
+      "snippet": "Covers EC2 Instance Connect and using your own SSH key to connect to Linux instances.",
+      "source": "AWS Documentation"
+    },
+    {
+      "title": "Connect to your Linux instance using an SSH client",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html",
+      "published_at": null,
+      "snippet": "Provides the ssh command syntax and prerequisites for connecting to a Linux instance.",
+      "source": "AWS Documentation"
+    },
+    {
+      "title": "Best practices for Amazon EC2",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-best-practices.html",
+      "published_at": null,
+      "snippet": "AWS recommendations for security, storage, backup, and resilience of EC2 instances.",
+      "source": "AWS Documentation"
+    },
+    {
+      "title": "How to create an EC2 instance from the AWS Console",
+      "url": "https://www.techtarget.com/searchcloudcomputing/tutorial/How-to-create-an-EC2-instance-from-AWS-Console",
+      "published_at": null,
+      "snippet": "Step-by-step tutorial on launching an EC2 instance from the AWS Console with key concepts like security groups.",
+      "source": "TechTarget"
+    },
+    {
+      "title": "Launch the EC2 Instance in AWS with New Instance Wizard",
+      "url": "https://www.geeksforgeeks.org/devops/launch-the-ec2-instance-in-aws-with-new-instance-wizard",
+      "published_at": null,
+      "snippet": "Beginner guide to launching an EC2 instance using the AWS Management Console.",
+      "source": "GeeksforGeeks"
+    },
+    {
+      "title": "How to create an AWS EC2 instance using AWS Console",
+      "url": "https://cloudbytes.dev/aws-academy/how-to-create-an-aws-ec2-instance-using-aws-console",
+      "published_at": null,
+      "snippet": "Tutorial for creating an EC2 instance with the AWS Console, including key pair and security group setup.",
+      "source": "CloudBytes"
+    },
+    {
+      "title": "How to Create an EC2 Instance AWS (2026) | Step-by-Step Tutorial",
+      "url": "https://www.youtube.com/watch?v=5xc8M5WMM6s",
+      "published_at": "2025-11-01",
+      "snippet": "Video tutorial showing how to launch an EC2 instance from the AWS Management Console and connect via SSH.",
+      "source": "YouTube"
+    },
+    {
+      "title": "How to Launch Your First EC2 Instance from the AWS Console",
+      "url": "https://oneuptime.com/blog/post/2026-02-12-launch-first-ec2-instance-from-aws-console/view",
+      "published_at": null,
+      "snippet": "Walks through launching an EC2 instance, choosing an AMI, and connecting to the instance.",
+      "source": "OneUptime"
+    },
+    {
+      "title": "AWS EC2 \u2014 create EC2 instance and connect to it via SSH",
+      "url": "https://hkcodeblogs.medium.com/aws-ec2-create-and-connect-to-instance-via-ssh-354a0c1909f",
+      "published_at": "2023-09-10",
+      "snippet": "Article showing how to create an EC2 instance and connect to it over SSH using a key pair.",
+      "source": "Medium"
+    },
+    {
+      "title": "Connect to your EC2 instance using SSH the modern way",
+      "url": "https://www.youtube.com/watch?v=w-yVPzSbb0c",
+      "published_at": "2022-02-01",
+      "snippet": "Demonstrates SSH connection to EC2 without opening port 22 using EC2 Instance Connect and Systems Manager.",
+      "source": "YouTube"
+    },
+    {
+      "title": "How to SSH into an EC2 Instance: A Step-by-Step Guide",
+      "url": "https://goteleport.com/learn/ssh-into-ec2-instance",
+      "published_at": null,
+      "snippet": "Guide for connecting to an EC2 instance with SSH using a key pair on Mac, Linux, or Windows.",
+      "source": "Teleport"
+    },
+    {
+      "title": "How to Launch AWS EC2 Instance using the AWS Console \u2014 2024",
+      "url": "https://medium.com/@opeoluwaakinsiku2017/how-to-launch-amazon-ec2-instance-using-the-aws-console-2024-b8aca5603e4d",
+      "published_at": null,
+      "snippet": "Step-by-step Medium tutorial for launching and terminating an EC2 instance using the console.",
+      "source": "Medium"
+    },
+    {
+      "title": "AWS EC2 Tutorial | How to Create EC2 Instance in AWS?",
+      "url": "https://www.mygreatlearning.com/blog/aws-ec2-tutorial",
+      "published_at": null,
+      "snippet": "Beginner tutorial covering EC2 instance creation and connection from the AWS Management Console.",
+      "source": "Great Learning"
+    }
+  ]
+}
