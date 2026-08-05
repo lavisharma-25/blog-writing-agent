@@ -21,11 +21,3 @@ async def list_blogs():
         )
 
     return {"success": True, "blogs": blogs}
-
-
-# import asyncio
-# import json
-
-# test = asyncio.run(list_blogs())
-
-# print(json.dumps(test, indent=2))
