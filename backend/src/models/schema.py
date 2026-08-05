@@ -113,12 +113,6 @@ class BlogListResponse(BaseModel):
     blogs: List[dict[str, Any]]
 
 
-# class ExportBlogRequest(BaseModel):
-#     """Request payload for exporting a blog."""
-
-#     output_format: Literal["md", "html", "pdf", "docx"] = "md"
-
-
 class ProvidersResponse(BaseModel):
     """Available provider/model configuration response."""
 

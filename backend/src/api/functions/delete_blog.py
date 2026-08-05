@@ -3,7 +3,7 @@ from fastapi import HTTPException
 from backend.src.core.settings import settings
 from backend.src.utils.metadata_utils import read_metadata
 
-from backend.src.models.schemas.delete_api import DeleteBlogResponse
+from backend.src.models.schemas.delete_schema import DeleteBlogResponse
 
 
 async def delete_blog(blog_id: str) -> DeleteBlogResponse:
