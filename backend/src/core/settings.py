@@ -87,12 +87,6 @@ class Settings(BaseSettings):
     LOGS_DIR: Path = BASE_DIR / "LOGS"
     OUTPUT_DIR: Path = BASE_DIR / "output"
 
-    # def blog_path(self, blog_id: str) -> Path:
-    #     return self.OUTPUT_DIR / f"{_safe_blog_id(blog_id)}.md"
-
-    def metadata_path(self, blog_id: str) -> Path:
-        return self.OUTPUT_DIR / f"{blog_id}.json"
-
     # ==========================================================================
     # Directory Management
     # ==========================================================================
