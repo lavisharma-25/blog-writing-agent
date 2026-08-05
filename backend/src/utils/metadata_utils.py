@@ -5,7 +5,7 @@ from datetime import datetime
 from backend.src.core.settings import settings
 
 
-def read_metadata(blog_id: str) -> dict[str, Any]:
+async def read_metadata(blog_id: str) -> dict[str, Any]:
     path = settings.metadata_path(blog_id)
     if not path.exists():
         print(f"Metadata file does not exist for blog_id {blog_id}")
@@ -16,7 +16,7 @@ def read_metadata(blog_id: str) -> dict[str, Any]:
         return {}
 
 
-def write_metadata(blog_id: str, metadata: dict[str, Any]) -> None:
+async def write_metadata(blog_id: str, metadata: dict[str, Any]) -> None:
     payload = {
         "blog_id": blog_id,
         "updated_at": datetime.now().isoformat(timespec="seconds"),
