@@ -9,6 +9,8 @@ class LogsRequest(BaseModel):
 
 
 class LogsResponse(BaseModel):
-    status: Literal["success"]
+    """Response payload for retrieving log files or log content."""
+
+    status: Literal["success", "error"]
     files: List[str]
     content: List[str]

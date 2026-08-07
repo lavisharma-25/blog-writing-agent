@@ -6,7 +6,7 @@ async def get_providers() -> ProvidersResponse:
     custom_provider = settings.CUSTOM_PROVIDER if settings.CUSTOM_PROVIDER != "None" else None
     resolved_openai = settings.resolve_openai_config()
     return ProvidersResponse(
-        success=True,
+        status="success",
         data={
             "active_provider": settings.LLM_PROVIDER,
             "custom_provider": custom_provider,

@@ -8,6 +8,6 @@ async def health_check() -> schema.HealthResponse:
     logger.info("Health check requested")
 
     return schema.HealthResponse(
-        status="healthy",
+        status="success",
         message="API is running smoothly",
     )

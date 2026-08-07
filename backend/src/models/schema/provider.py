@@ -1,9 +1,9 @@
-from typing import Any
+from typing import Any, Literal
 from pydantic import BaseModel
 
 
 class ProvidersResponse(BaseModel):
     """Available provider/model configuration response."""
 
-    success: bool
+    status: Literal["success", "error"]
     data: dict[str, Any]
