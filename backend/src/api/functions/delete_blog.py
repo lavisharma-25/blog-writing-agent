@@ -3,10 +3,14 @@ from fastapi import HTTPException
 from backend.src.core.settings import settings
 from backend.src.utils.metadata_utils import read_metadata
 
-from backend.src.models.schemas.delete_schema import DeleteBlogResponse
+from backend.src.models import schema
 
 
-async def delete_blog(blog_id: str) -> DeleteBlogResponse:
+async def delete_blog(request: schema.DeleteBlogRequest) -> schema.DeleteBlogResponse:
+    """ Delete a blog and its associated metadata."""
+
+    blog_id = request.blog_id
+    
     metadata_path = settings.OUTPUT_DIR / f"{blog_id}.json"
     blog_metadata = await read_metadata(blog_id)
     
@@ -19,8 +23,8 @@ async def delete_blog(blog_id: str) -> DeleteBlogResponse:
     if metadata_path.exists():
         metadata_path.unlink()
 
-    return DeleteBlogResponse(
-        success=True,
+    return schema.DeleteBlogResponse(
+        status="success",
         data={
             "filename": blog_path.name,
             "metadata": str(metadata_path)
