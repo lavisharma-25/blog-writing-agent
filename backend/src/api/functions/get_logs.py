@@ -53,8 +53,6 @@ def get_logs(request: schema.LogsRequest) -> schema.LogsResponse:
             reverse=True,
         )
 
-        print(files)
-
         return schema.LogsResponse(
             status="success",
             files=files,

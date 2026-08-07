@@ -1,14 +1,15 @@
+from backend.src.models import schema
 from backend.src.core.settings import settings
 from backend.src.utils.metadata_utils import read_metadata
 
 
-async def list_blogs():
+async def list_blogs() -> schema.BlogListResponse:
     blogs = []
     for path in sorted(settings.OUTPUT_DIR.glob("*.json"), key=lambda item: item.stat().st_mtime, reverse=True):
 
         blog_id = path.stem
 
-        metadata = read_metadata(blog_id)
+        metadata = await read_metadata(blog_id)
 
         blogs.append(
             {
@@ -20,4 +21,7 @@ async def list_blogs():
             }
         )
 
-    return {"success": True, "blogs": blogs}
+    return schema.BlogListResponse(
+        status="success",
+        blogs=blogs
+    )
