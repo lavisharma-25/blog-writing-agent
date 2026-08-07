@@ -3,7 +3,7 @@ from fastapi import APIRouter, status
 from backend.src.models import schema
 
 from backend.src.api.functions.list_blogs import list_blogs
-# from backend.src.api.functions.read_blog import read_blog
+from backend.src.api.functions.read_blog import read_blog
 # from backend.src.api.functions.delete_blog import delete_blog
 # from backend.src.api.functions.export_blog import export_blog
 # from backend.src.api.functions.generate_blog import generate_blog
@@ -13,6 +13,6 @@ router = APIRouter()
 
 # router.post("/blogs/generate", response_model=schemas.WorkflowResponse, status_code=status.HTTP_200_OK)(generate_blog)
 router.get("/blogs/list", response_model=schema.BlogListResponse, status_code=status.HTTP_200_OK)(list_blogs)
-# router.get("/blogs/read", response_model=schemas.BlogResponse, status_code=status.HTTP_200_OK)(read_blog)
-# router.delete("/blogs/delete", response_model=DeleteBlogResponse, status_code=status.HTTP_200_OK)(delete_blog)
+router.post("/blogs/read", response_model=schema.ReadBlogResponse, status_code=status.HTTP_200_OK)(read_blog)
+# router.delete("/blogs/delete", response_model=schema.DeleteBlogResponse, status_code=status.HTTP_200_OK)(delete_blog)
 # router.post("/blogs/export", status_code=status.HTTP_200_OK)(export_blog)
