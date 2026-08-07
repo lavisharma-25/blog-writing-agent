@@ -69,25 +69,6 @@ class RouterDecision(BaseModel):
 # -----------------------------
 # API Request & Response Schemas
 # -----------------------------
-class WorkflowRequest(BaseModel):
-    """Request payload for executing the workflow."""
-
-    topic: str = Field(..., min_length=1)
-    audience: Optional[str] = None
-    tone: Optional[str] = None
-    blog_kind: Optional[Literal["explainer", "tutorial", "news_roundup", "comparison", "system_design"]] = None
-    word_count: Optional[int] = Field(default=None, gt=0)
-    research_mode: Optional[Literal["auto", "force", "none"]] = "auto"
-    include_images: bool = False
-    output_format: Literal["md", "html", "pdf", "docx"] = "md"
-
-
-class WorkflowResponse(BaseModel):
-    """Response returned after successful workflow execution."""
-
-    success: bool
-    data: dict
-
 
 # class BlogSummary(BaseModel):
 #     """Summary for a generated blog file."""
@@ -97,30 +78,3 @@ class WorkflowResponse(BaseModel):
 #     filename: str
 #     created_at: str | None = None
 #     metadata: dict[str, Any] = Field(default_factory=dict)
-
-
-class BlogResponse(BaseModel):
-    """Single blog response."""
-
-    success: bool
-    data: dict[str, Any]
-
-
-class BlogListResponse(BaseModel):
-    """Generated blog listing response."""
-
-    success: bool
-    blogs: List[dict[str, Any]]
-
-
-class ProvidersResponse(BaseModel):
-    """Available provider/model configuration response."""
-
-    success: bool
-    data: dict[str, Any]
-
-
-class GetLogsRequest(BaseModel):
-    """Request payload for retrieving log files or log content."""
-    
-    value: str = ""

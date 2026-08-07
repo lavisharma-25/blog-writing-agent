@@ -1,11 +1,11 @@
 from datetime import datetime
 from fastapi import HTTPException
 
+from backend.src.models import schema
 from backend.src.core.settings import settings
-from backend.src.models.schema import GetLogsRequest
 
 
-def get_logs(request: GetLogsRequest):
+def get_logs(request: schema.LogsRequest) -> schema.LogsResponse:
     """
     Retrieve log files or log content based on the provided value.
 
@@ -22,23 +22,16 @@ def get_logs(request: GetLogsRequest):
          (e.g., "2026-07-24" -> "2026-07-24.log").
 
     Args:
-        request (GetLogsRequest):
+        request (schema.LogsRequest):
             Request object containing the input value used to determine
             the operation to perform.
 
     Returns:
-        dict:
-            - For file listing:
+        schema.LogsResponse:
                 {
                     "status": "success",
-                    "files": list[str]
-                }
-
-            - For log file content:
-                {
-                    "status": "success",
-                    "file_name": str,
-                    "content": list[str]
+                    "files": List[str],
+                    "content": List[str]
                 }
 
     Raises:
@@ -60,10 +53,13 @@ def get_logs(request: GetLogsRequest):
             reverse=True,
         )
 
-        return {
-            "status": "success",
-            "files": files,
-        }
+        print(files)
+
+        return schema.LogsResponse(
+            status="success",
+            files=files,
+            content=[],
+        )
 
     # -------------------------------------------------
     # Case 2: YYYY-MM -> Return month's log files
@@ -77,10 +73,11 @@ def get_logs(request: GetLogsRequest):
             reverse=True,
         )
 
-        return {
-            "status": "success",
-            "files": files,
-        }
+        return schema.LogsResponse(
+            status="success",
+            files=None if not files else files,
+            content=[],
+        )
 
     except ValueError:
         pass
@@ -99,8 +96,8 @@ def get_logs(request: GetLogsRequest):
     with open(file_path, "r", encoding="utf-8") as f:
         logs = [line.rstrip("\n") for line in f if line.strip()]
 
-    return {
-        "status": "success",
-        "file_name": file_path.name,
-        "content": logs,
-    }
+    return schema.LogsResponse(
+        status="success",
+        files=[file_path.name],
+        content=logs,
+    )

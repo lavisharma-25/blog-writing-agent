@@ -2,8 +2,8 @@ from typing import Any
 from pydantic import BaseModel
 
 
-class DeleteBlogResponse(BaseModel):
-    """Response payload for deleting a blog."""
-    
+class ProvidersResponse(BaseModel):
+    """Available provider/model configuration response."""
+
     success: bool
     data: dict[str, Any]
