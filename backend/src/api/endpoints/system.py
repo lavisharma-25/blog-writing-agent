@@ -1,9 +1,7 @@
 from fastapi import APIRouter, status
 
+from backend.src.api.functions import *
 from backend.src.models import schema
-from backend.src.api.functions.get_logs import get_logs
-from backend.src.api.functions.health import health_check
-from backend.src.api.functions.get_providers import get_providers
 
 
 router = APIRouter()

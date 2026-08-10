@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from fastapi import HTTPException, status
 
 from backend.src.models import schema
-from backend.src.api.functions.workflow import run_workflow
+from backend.src.graph.builder import workflow
 from backend.src.utils.metadata_utils import write_metadata
 
 
@@ -35,11 +35,39 @@ def _filename_from_title(title: str) -> str:
     return clean_title.lower().replace(" ", "_") + ".md"
 
 
+def _run_workflow(topic: str) -> dict:
+    """
+    Execute the LangGraph workflow.
+
+    Args:
+        topic: User input topic.
+
+    Returns:
+        Workflow output.
+    """
+    try:
+        state = {
+            "topic": topic,
+            "mode": "",
+            "needs_research": False,
+            "queries": [],
+            "evidence": [],
+            "plan": None,
+            "sections": [],
+            "final": "",
+        }
+
+        return workflow.invoke(state)
+
+    except Exception as exc:
+        raise RuntimeError("Failed to execute workflow.") from exc
+
+
 async def generate_blog(request: schema.WorkflowRequest) -> schema.WorkflowResponse:
     """Generate a blog and persist metadata for list/read/export endpoints."""
 
     try:
-        result = run_workflow(request.topic)
+        result = _run_workflow(request.topic)
         print(f"\nRESULT:\n{result}\n")
         plain_result = _to_plain(result)
         print(f"\nPLAIN RESULT:\n{plain_result}\n")

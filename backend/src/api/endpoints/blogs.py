@@ -1,11 +1,7 @@
 from fastapi import APIRouter, status
 
+from backend.src.api.functions import *
 from backend.src.models import schema
-from backend.src.api.functions.read_blog import read_blog
-from backend.src.api.functions.list_blogs import list_blogs
-from backend.src.api.functions.delete_blog import delete_blog
-from backend.src.api.functions.export_blog import export_blog
-from backend.src.api.functions.generate_blog import generate_blog
 
 
 router = APIRouter()
