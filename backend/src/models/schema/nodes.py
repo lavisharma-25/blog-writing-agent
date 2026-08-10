@@ -1,4 +1,4 @@
-from typing import Any, List, Literal, Optional
+from typing import List, Literal, Optional
 from pydantic import BaseModel, Field
 
 # -----------------------------
@@ -64,17 +64,3 @@ class RouterDecision(BaseModel):
     needs_research: bool
     mode: Literal["closed_book", "hybrid", "open_book"]
     queries: List[str] = Field(default_factory=list)
-
-
-# -----------------------------
-# API Request & Response Schemas
-# -----------------------------
-
-# class BlogSummary(BaseModel):
-#     """Summary for a generated blog file."""
-
-#     blog_id: str
-#     title: str
-#     filename: str
-#     created_at: str | None = None
-#     metadata: dict[str, Any] = Field(default_factory=dict)
