@@ -1,11 +1,11 @@
+from backend.models import schema
 from backend.core.settings import settings
-from backend.models.schema import ProvidersResponse
 
 
-async def get_providers() -> ProvidersResponse:
+async def get_providers() -> schema.ProvidersResponse:
     custom_provider = settings.CUSTOM_PROVIDER if settings.CUSTOM_PROVIDER != "None" else None
     resolved_openai = settings.resolve_openai_config()
-    return ProvidersResponse(
+    return schema.ProvidersResponse(
         status="success",
         data={
             "active_provider": settings.LLM_PROVIDER,

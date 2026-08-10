@@ -1,9 +1,8 @@
 from fastapi import HTTPException
 
+from backend.models import schema
 from backend.core.settings import settings
 from backend.utils.metadata_utils import read_metadata
-
-from backend.models import schema
 
 
 async def delete_blog(request: schema.DeleteBlogRequest) -> schema.DeleteBlogResponse:
