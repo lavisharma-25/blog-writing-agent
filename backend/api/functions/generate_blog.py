@@ -6,6 +6,7 @@ from pydantic import BaseModel
 from fastapi import HTTPException, status
 
 from backend.models import schema
+from backend.core.logging import logger
 from backend.graph.builder import workflow
 from backend.utils.metadata_utils import write_metadata
 
@@ -68,14 +69,17 @@ async def generate_blog(request: schema.WorkflowRequest) -> schema.WorkflowRespo
 
     try:
         result = _run_workflow(request.topic)
-        print(f"\nRESULT:\n{result}\n")
+        logger.debug("Workflow result: %s", result)
+
         plain_result = _to_plain(result)
-        print(f"\nPLAIN RESULT:\n{plain_result}\n")
+        logger.debug("Plain workflow result: %s", plain_result)
 
         title = _get_plan_title(result)
-        print(f"\nTITLE:\n{title}\n")
+        logger.debug("Title: %s", title)
+
         filename = _filename_from_title(title)
-        print(f"\nFILENAME:\n{filename}\n")
+        logger.debug("Filename: %s", filename)
+        
         created_at = datetime.now().isoformat(timespec="seconds")
         blog_id = f"{datetime.now().strftime('%Y%m%d-%H%M%S')}-{uuid.uuid4()}"
 

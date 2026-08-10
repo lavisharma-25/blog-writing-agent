@@ -5,7 +5,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 BASE_DIR = Path(__file__).resolve().parents[2]
-print(BASE_DIR)
+
 
 class Settings(BaseSettings):
     """Application Settings."""
@@ -116,7 +116,7 @@ class Settings(BaseSettings):
           corresponding values off this Settings instance.
         """
         if not self.CUSTOM_PROVIDER or self.CUSTOM_PROVIDER == "None":
-            print("=== USING OPENAI STANDARD MODEL CONFIG ===")
+
             return {
                 "model": self.OPENAI_MODEL,
                 "api_key": self.OPENAI_API_KEY,

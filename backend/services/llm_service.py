@@ -60,8 +60,9 @@ class LLMService:
         temperature: float = 0.0,
         max_tokens: int | None = None,
     ) -> ChatOpenAI:
+        
         config = self.settings.resolve_openai_config()
-        print(f"Model Configuration: \n{config.get("model")}")
+
         return ChatOpenAI(
             model=config["model"],
             api_key=config["api_key"],

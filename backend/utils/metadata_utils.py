@@ -2,6 +2,7 @@ import json
 from typing import Any
 from datetime import datetime
 
+from backend.core.logging import logger
 from backend.core.settings import settings
 
 
@@ -10,7 +11,7 @@ async def read_metadata(blog_id: str) -> dict[str, Any]:
     path = settings.OUTPUT_DIR / f"{blog_id}.json"
 
     if not path.exists():
-        print(f"Metadata file does not exist for blog_id {blog_id}")
+        logger.warning("Metadata file does not exist for blog_id %s", blog_id)
         return {}
     try:
         return json.loads(path.read_text(encoding="utf-8"))
