@@ -1,4 +1,4 @@
-from backend.src.graph.builder import workflow
+from backend.graph.builder import workflow
 
 try:
     def run_workflow(topic: str):
