@@ -21,6 +21,4 @@ def fanout(state: State):
 
 def route_next(state: State) -> str:
 
-    print("============ Routing ============")
-
     return "research" if state.needs_research else "orchestrator"
