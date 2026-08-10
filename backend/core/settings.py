@@ -85,7 +85,7 @@ class Settings(BaseSettings):
     PROMPTS_DIR: Path = BASE_DIR / "backend" / "prompts"
     MODEL_CONFIG_PATH: Path = BASE_DIR / "backend" / "config" / "model_config_map.json"
     LOGS_DIR: Path = BASE_DIR / "LOGS"
-    OUTPUT_DIR: Path = BASE_DIR / "output"
+    OUTPUT_DIR: Path = BASE_DIR / "OUTPUT"
 
     # ==========================================================================
     # Directory Management
