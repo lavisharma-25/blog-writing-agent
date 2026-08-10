@@ -1,0 +1,123 @@
+{
+  "blog_id": "20260810-131343-49169315-aa1c-449c-b5a1-5f86a866f962",
+  "updated_at": "2026-08-10T13:13:43",
+  "title": "What Is Claude Design? Anthropic's AI Design Tool for Visual Collaboration",
+  "filename": "what_is_claude_design_anthropic's_ai_design_tool_for_visual_collaboration.md",
+  "created_at": "2026-08-10T13:13:43",
+  "topic": "What is Claude Design? Explain Anthropics AI Design Tool",
+  "audience": "string",
+  "tone": "string",
+  "blog_kind": "explainer",
+  "research_mode": "auto",
+  "include_images": false,
+  "output_format": "md",
+  "mode": "hybrid",
+  "needs_research": true,
+  "queries": [
+    "What is Claude Design by Anthropic",
+    "Anthropic Claude Design AI tool features",
+    "Claude Design documentation Anthropic",
+    "Claude Design vs other AI design tools",
+    "Anthropic Claude Design release and updates"
+  ],
+  "sources": [
+    {
+      "title": "Introducing Claude Design by Anthropic Labs",
+      "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "published_at": null,
+      "snippet": "Import from anywhere. Start from a text prompt, upload images and documents, or point Claude at your codebase. Refine with fine-grained controls, then export to Canva, PDF, PPTX, or hand off to Claude Code.",
+      "source": "Anthropic"
+    },
+    {
+      "title": "Anthropic launches Claude Design, a new product for creating quick visuals",
+      "url": "https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals",
+      "published_at": "2026-04-17",
+      "snippet": "Anthropic announced on Friday that it\u2019s launching Claude Design, a new experimental product that lets users create visuals like prototypes, slides, one-pagers, and more using Claude.",
+      "source": "TechCrunch"
+    },
+    {
+      "title": "Anthropic just launched Claude Design, an AI tool that turns prompts into prototypes and challenges Figma",
+      "url": "https://venturebeat.com/technology/anthropic-just-launched-claude-design-an-ai-tool-that-turns-prompts-into-prototypes-and-challenges-figma",
+      "published_at": null,
+      "snippet": "Anthropic today launched Claude Design, a new product from its Anthropic Labs division that allows users to create polished visual work \u2014 designs, interactive prototypes, slide decks, one-pagers, and marketing collateral \u2014 through conversational prompts and fine-grained editing controls.",
+      "source": "VentureBeat"
+    },
+    {
+      "title": "Anthropic overhauled Claude Design to fix the handoff. A designer and an engineer disagree on whether it worked.",
+      "url": "https://thenewstack.io/anthropic-claude-design-overhaul",
+      "published_at": "2026-06-19",
+      "snippet": "Anthropic's Claude Design update adds bidirectional Design-Code integration and brand controls, but designers say token costs still slow the workflow.",
+      "source": "The New Stack"
+    },
+    {
+      "title": "Release notes | Claude Help Center",
+      "url": "https://support.claude.com/en/articles/12138966-release-notes",
+      "published_at": null,
+      "snippet": "With Opus 4.7, we also launched Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create visual outputs like designs, prototypes, slides, and one-pagers.",
+      "source": "Claude Help Center"
+    },
+    {
+      "title": "Claude (AI) - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Claude_(AI)",
+      "published_at": null,
+      "snippet": "Claude Design is a collaborative visual creation tool released by Anthropic Labs on April 17, 2026, that lets users generate designs, prototypes, slides, and marketing materials through natural-language prompts.",
+      "source": "Wikipedia"
+    },
+    {
+      "title": "How Good is Anthropic's Claude Design? - Designing with AI",
+      "url": "https://newsletter.victordibia.com/p/how-good-is-anthropics-claude-design",
+      "published_at": null,
+      "snippet": "Claude Design is a prompt-driven design tool. You hand it descriptions, screenshots, or a codebase; it produces working prototypes, slides, or one-pagers; you iterate visually through conversation, inline comments, and direct edits.",
+      "source": "Designing with AI"
+    },
+    {
+      "title": "Claude Design: What It Is & Why It Matters (2026)",
+      "url": "https://www.eigent.ai/blog/claude-design",
+      "published_at": null,
+      "snippet": "Claude Design is an Anthropic Labs product that lets teams collaborate with Claude on visual work. Rather than answering in a chat box, Claude generates branded outputs \u2014 prototypes, presentations, one-pagers, and other design artifacts \u2014 inside a dedicated workspace.",
+      "source": "Eigent AI"
+    },
+    {
+      "title": "Claude Design: Anthropic's new canvas for designers, PMs, and developers",
+      "url": "https://appwrite.io/blog/post/claude-design",
+      "published_at": null,
+      "snippet": "Claude Design is a new Anthropic Labs product that turns Claude into a visual collaborator. You describe what you want in plain English, Claude builds a first pass on a canvas, and you refine through chat, inline comments, or sliders.",
+      "source": "Appwrite"
+    },
+    {
+      "title": "Claude Design Just Got a Major Update",
+      "url": "https://uxplanet.org/claude-design-just-got-a-major-update-270ad55087f3",
+      "published_at": "2026-06-18",
+      "snippet": "Anthropic released a major Claude Design overhaul with design system imports, better design editing, and finally fixed the token-burning problem.",
+      "source": "UX Planet"
+    },
+    {
+      "title": "Introducing Claude Design by Anthropic Labs",
+      "url": "https://www.youtube.com/watch?v=t_LBECIQQqs",
+      "published_at": "2026-04-17",
+      "snippet": "Claude Design is a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like prototypes, slides, one-pagers, and more.",
+      "source": "YouTube"
+    },
+    {
+      "title": "What Is Claude Design? Anthropic's AI-Powered Visual ...",
+      "url": "https://www.mindstudio.ai/blog/what-is-claude-design-anthropic",
+      "published_at": null,
+      "snippet": "Claude Design can build interactive prototypes for apps and dashboards. These include functional navigation, clickable buttons, form elements, and state changes \u2014 enough to convey how a product should feel and flow, without requiring any design tooling.",
+      "source": "MindStudio"
+    },
+    {
+      "title": "Claude Design Review: Features, Pros, Cons, and Best Alternatives",
+      "url": "https://animaapp.com/blog/ai-design-en/claude-design-review-features-pros-cons-and-best-alternatives",
+      "published_at": null,
+      "snippet": "Claude Design is part of a broader shift in AI design tools, where teams are comparing workflows like Anima Playground for high-fidelity, code-connected prototypes and Buddy, the Figma AI agent by Anima.",
+      "source": "Anima"
+    },
+    {
+      "title": "Claude Design: What it's good for vs. Figma - by Claire Vo",
+      "url": "https://www.lennysnewsletter.com/p/what-claude-design-is-actually-good",
+      "published_at": null,
+      "snippet": "Claire Vo does a full walkthrough of the AI design tools that dropped in April 2026: Anthropic's new Claude Design, OpenAI's GPT Images 2.0, and Google Labs' open-source DESIGN.md format.",
+      "source": "Lenny's Newsletter"
+    }
+  ]
+}
