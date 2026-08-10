@@ -23,7 +23,6 @@ DATE_FORMAT = "%d-%m-%Y %H:%M:%S"
 CONSOLE_FORMAT = (
     "%(asctime)s | "
     "%(log_color)s%(levelname)-8s%(reset)s | "
-    "%(name)-35s | "
     "%(filename)s:%(lineno)-4d | "
     "%(funcName)-25s | "
     "%(message)s"
@@ -32,7 +31,6 @@ CONSOLE_FORMAT = (
 FILE_FORMAT = (
     "%(asctime)s | "
     "%(levelname)-8s | "
-    "%(name)-35s | "
     "%(filename)s:%(lineno)-4d | "
     "%(funcName)-25s | "
     "%(message)s"
