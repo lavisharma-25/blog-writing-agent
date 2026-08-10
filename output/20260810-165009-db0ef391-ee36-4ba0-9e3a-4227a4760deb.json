@@ -1,0 +1,393 @@
+{
+  "blog_id": "20260810-165009-db0ef391-ee36-4ba0-9e3a-4227a4760deb",
+  "updated_at": "2026-08-10T16:50:09",
+  "title": "How AI Agents Work and How to Build One with LangChain",
+  "filename": "how_ai_agents_work_and_how_to_build_one_with_langchain.md",
+  "created_at": "2026-08-10T16:50:09",
+  "topic": "Do research and tell me how an ai agent works and how to implement it using langchain?",
+  "audience": "string",
+  "tone": "string",
+  "blog_kind": "explainer",
+  "research_mode": "auto",
+  "include_images": false,
+  "output_format": "md",
+  "mode": "hybrid",
+  "needs_research": true,
+  "queries": [
+    "AI agent architecture components and workflow",
+    "LangChain agent implementation tutorial",
+    "LangChain agent types and tools",
+    "LangChain agent executor example",
+    "LangChain ReAct agent implementation",
+    "LangChain agent memory and state management",
+    "LangChain agent best practices 2025",
+    "LangChain vs LangGraph for building agents",
+    "how to build an AI agent with LangChain step by step"
+  ],
+  "sources": [
+    {
+      "title": "Agent architecture components | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/agents/architecture/components-of-agent-architecture",
+      "published_at": null,
+      "snippet": "Understanding these components is essential for architects and developers who design, implement, and maintain agent solutions within the Microsoft ecosystem.",
+      "source": "Microsoft Learn"
+    },
+    {
+      "title": "We Need To Talk About AI Agent Architectures",
+      "url": "https://dev.to/aws/we-need-to-talk-about-ai-agent-architectures-4n49",
+      "published_at": null,
+      "snippet": "Step Functions provides a workflow control mechanism so the agent does not need to manage retries, branching, or overall workflow state.",
+      "source": "Dev.to"
+    },
+    {
+      "title": "AI Agent Architecture: A Complete Guide for 2026 - Monday.com",
+      "url": "https://monday.com/blog/ai-agents/ai-agent-architecture",
+      "published_at": null,
+      "snippet": "Distributed collaboration architectures deploy multiple specialized agents that operate concurrently on distinct workflow components.",
+      "source": "Monday.com"
+    },
+    {
+      "title": "What Is Agentic Architecture? | IBM",
+      "url": "https://www.ibm.com/think/topics/agentic-architecture",
+      "published_at": null,
+      "snippet": "Agentic architecture refers to the structure and design of agentic artificial intelligence (AI) frameworks.",
+      "source": "IBM"
+    },
+    {
+      "title": "AI Agent Architecture: Components & Types",
+      "url": "https://www.puppygraph.com/blog/ai-agent-architecture",
+      "published_at": null,
+      "snippet": "AI Agent Architecture: Components & Types",
+      "source": "PuppyGraph"
+    },
+    {
+      "title": "AI Agent Architecture: How Autonomous Systems Are Built?",
+      "url": "https://kanerika.com/blogs/ai-agent-architecture",
+      "published_at": null,
+      "snippet": "AI, Analytics and Automation. Global Tech Consulting Firm.",
+      "source": "Kanerika"
+    },
+    {
+      "title": "LangChain Agents in 2025 | Full Tutorial for v0.3",
+      "url": "https://www.youtube.com/watch?v=Gi7nqB37WEY&vl=en-US",
+      "published_at": null,
+      "snippet": "In this chapter, we are going to introduce agents. Agents are one of the most important components in the world of AI.",
+      "source": "YouTube"
+    },
+    {
+      "title": "LangChain Agents for Noobs: A Complete Practical Guide",
+      "url": "https://medium.com/@mehulpratapsingh/langchain-agents-for-noobs-a-complete-practical-guide-e231b6c71a4a",
+      "published_at": null,
+      "snippet": "Let\u2019s create a custom research agent that can gather and synthesize information.",
+      "source": "Medium"
+    },
+    {
+      "title": "Building Deep Agents with LangChain: A Complete Hands-On Tutorial",
+      "url": "https://krishcnaik.substack.com/p/building-deep-agents-with-langchain",
+      "published_at": null,
+      "snippet": "Deep agents shine when the task feels more like a project than a question.",
+      "source": "Substack"
+    },
+    {
+      "title": "Retrieval Augmented Generation (RAG) with Deep Agents",
+      "url": "https://docs.langchain.com/oss/python/deepagents/rag",
+      "published_at": null,
+      "snippet": "RAG patterns for Deep Agents, including skills-guided retrieval, rubric grading, and a tutorial that indexes LangChain docs.",
+      "source": "LangChain Docs"
+    },
+    {
+      "title": "LangChain: Open Source AI Agent Framework | Build Agents Faster",
+      "url": "https://www.langchain.com/langchain",
+      "published_at": null,
+      "snippet": "LangSmith, our agent engineering platform, helps developers debug every agent decision, eval changes, and deploy in one click.",
+      "source": "LangChain"
+    },
+    {
+      "title": "LangChain Full Crash Course - AI Agents in Python",
+      "url": "https://www.youtube.com/watch?v=J7j5tCB_y4w",
+      "published_at": null,
+      "snippet": "Method taking self as a parameter here calling the constructor of the parent class.",
+      "source": "YouTube"
+    },
+    {
+      "title": "A Quick Guide to Agent Types in LangChain for CSV",
+      "url": "https://medium.com/@csakash03/a-quick-guide-to-agent-types-in-langchain-for-csv-eb823be10799",
+      "published_at": null,
+      "snippet": "LangChain\u2019s various agent types offer great flexibility for different use cases.",
+      "source": "Medium"
+    },
+    {
+      "title": "LangChain + Python Tutorial - The 4 Types of Agents",
+      "url": "https://www.youtube.com/watch?v=VDCO2-YS0R4",
+      "published_at": null,
+      "snippet": "Agents need to work with tools, chains and memory, and you can't really understand how agents work without understanding all those things.",
+      "source": "YouTube"
+    },
+    {
+      "title": "AgentType | langchain_classic | LangChain Reference",
+      "url": "https://reference.langchain.com/python/langchain-classic/agents/agent_types/AgentType",
+      "published_at": null,
+      "snippet": "An zero-shot react agent optimized for chat models. Capable of invoking tools that have multiple inputs.",
+      "source": "LangChain Reference"
+    },
+    {
+      "title": "Agents and Tools in LangChain - GeeksforGeeks",
+      "url": "https://www.geeksforgeeks.org/artificial-intelligence/agents-and-tools-in-langchain",
+      "published_at": null,
+      "snippet": "Tools are modular and reusable. Each tool has a name, function and description. Agents rely on tool descriptions to decide which tool to invoke.",
+      "source": "GeeksforGeeks"
+    },
+    {
+      "title": "Tools - Docs by LangChain",
+      "url": "https://docs.langchain.com/oss/python/langchain/tools",
+      "published_at": null,
+      "snippet": "The agent can now use both get_weather AND calculate_tip.",
+      "source": "LangChain Docs"
+    },
+    {
+      "title": "agents | langchain | LangChain Reference",
+      "url": "https://reference.langchain.com/python/langchain/agents",
+      "published_at": null,
+      "snippet": "Decorator used to dynamically create a middleware with the before_model hook.",
+      "source": "LangChain Reference"
+    },
+    {
+      "title": "Introducing LangChain Agents: 2024 Tutorial with Example",
+      "url": "https://brightinventions.pl/blog/introducing-langchain-agents-tutorial-with-example",
+      "published_at": null,
+      "snippet": "From LangChain v0.1.0 version, the recommended way of creating new agents is to use AgentExecutor.",
+      "source": "Bright Inventions"
+    },
+    {
+      "title": "LangChain Agent Executor Deep Dive | Aurelio AI",
+      "url": "https://www.aurelio.ai/learn/langchain-agent-executor",
+      "published_at": null,
+      "snippet": "A significant part of an agent is simple code logic, iteratively rerunning LLM calls and processing their output. One well-known example is the ReAct agent.",
+      "source": "Aurelio AI"
+    },
+    {
+      "title": "LangChain Agent Executor Deep Dive",
+      "url": "https://www.youtube.com/watch?v=iN1Xx8ca_8I&vl=en-US",
+      "published_at": null,
+      "snippet": "When we talk about agents, a significant part of an agent is simple code logic, iteratively rerunning LLM calls and processing their output.",
+      "source": "YouTube"
+    },
+    {
+      "title": "Implementing a Multi-Step Agent with Langchain | Cohere",
+      "url": "https://docs.cohere.com/v1/docs/implementing-a-multi-step-agent-with-langchain",
+      "published_at": null,
+      "snippet": "Below, we\u2019ve included two code snippets, equipping the agent with the Web Search and Python interpreter tools.",
+      "source": "Cohere Docs"
+    },
+    {
+      "title": "Medium",
+      "url": "https://medium.com/@hansakarukshan43/langchain-agentexecutor-build-smart-tool-using-ai-agents-ec4363758735",
+      "published_at": null,
+      "snippet": "Let\u2019s say you ask: \u201cWho is the president of France and what\u2019s 30% of 250?\u201d Here\u2019s how AgentExecutor might handle it.",
+      "source": "Medium"
+    },
+    {
+      "title": "AgentExecutor | langchain_classic | LangChain Reference",
+      "url": "https://reference.langchain.com/python/langchain-classic/agents/agent/AgentExecutor",
+      "published_at": null,
+      "snippet": "How to handle errors raised by the agent's output parser.",
+      "source": "LangChain Reference"
+    },
+    {
+      "title": "create_react_agent | langchain_classic | LangChain Reference",
+      "url": "https://reference.langchain.com/python/langchain-classic/agents/react/agent/create_react_agent",
+      "published_at": null,
+      "snippet": "Create an agent that uses ReAct prompting.",
+      "source": "LangChain Reference"
+    },
+    {
+      "title": "DIY #14 - Step-by-step implementation of a ReAct Agent in LangGraph",
+      "url": "https://mlpills.substack.com/p/diy-14-step-by-step-implementation",
+      "published_at": null,
+      "snippet": "Step-by-step implementation of a ReAct Agent in LangGraph.",
+      "source": "Substack"
+    },
+    {
+      "title": "Building ReAct agents with (and without) LangGraph \u2013 Dylan Castillo",
+      "url": "https://dylancastillo.co/posts/react-agent-langgraph.html",
+      "published_at": null,
+      "snippet": "In essence, agents are systems that can independently make decisions, use tools, take actions, and pursue a goal without direct human guidance.",
+      "source": "Dylan Castillo"
+    },
+    {
+      "title": "LangChain Reference",
+      "url": "https://reference.langchain.com/python/langchain",
+      "published_at": null,
+      "snippet": "LangChain agents are built on top of LangGraph in order to provide durable execution, streaming, human-in-the-loop, persistence, and more.",
+      "source": "LangChain Reference"
+    },
+    {
+      "title": "Build a Powerful ReAct Agent with Langchain & Langgraph \u2013 Full Tutorial",
+      "url": "https://www.youtube.com/watch?v=u772oTNStmU",
+      "published_at": "2025-02-11",
+      "snippet": "ReAct (Reasoning + Acting) agents are a powerful approach in AI that combines reasoning capabilities with action-taking.",
+      "source": "YouTube"
+    },
+    {
+      "title": "GitHub - langchain-ai/react-agent: LangGraph template for a simple ReAct agent \u00b7 GitHub",
+      "url": "https://github.com/langchain-ai/react-agent",
+      "published_at": null,
+      "snippet": "LangGraph template for a simple ReAct agent. Customize the agent's reasoning process in graph.py.",
+      "source": "GitHub"
+    },
+    {
+      "title": "Langchain v1 Agents 8 - Custom State & Memory Management Tutorial",
+      "url": "https://www.youtube.com/watch?v=8XYkfSDpbEo&vl=en",
+      "published_at": null,
+      "snippet": "In implicit state management, you have your state which is going to be a dictionary.",
+      "source": "YouTube"
+    },
+    {
+      "title": "Medium",
+      "url": "https://medium.com/@nidhikamewar1506/langgraph-state-management-and-memory-systems-37ec692621ca",
+      "published_at": null,
+      "snippet": "State and Memory management are fundamental to building robust applications with LangGraph.",
+      "source": "Medium"
+    },
+    {
+      "title": "Short-term memory - Docs by LangChain",
+      "url": "https://docs.langchain.com/oss/python/langchain/short-term-memory",
+      "published_at": null,
+      "snippet": "LangChain\u2019s agent manages short-term memory as a part of your agent\u2019s state. State is persisted using a checkpointer.",
+      "source": "LangChain Docs"
+    },
+    {
+      "title": "Mastering LangChain Agent Memory Management",
+      "url": "https://sparkco.ai/blog/mastering-langchain-agent-memory-management",
+      "published_at": null,
+      "snippet": "The architecture of AI agents now often includes diagrammatic representations of how memory components interact with other system elements.",
+      "source": "Sparkco"
+    },
+    {
+      "title": "Build AI agents with short-term & long-term memory",
+      "url": "https://redis.io/blog/build-smarter-ai-agents-manage-short-term-and-long-term-memory-with-redis",
+      "published_at": null,
+      "snippet": "LangGraph's checkpointing system maintains thread-specific state across agent reasoning loops.",
+      "source": "Redis"
+    },
+    {
+      "title": "Memory overview - Docs by LangChain",
+      "url": "https://docs.langchain.com/oss/python/concepts/memory",
+      "published_at": null,
+      "snippet": "Update instructions and state messages for agent memory.",
+      "source": "LangChain Docs"
+    },
+    {
+      "title": "Best practices for building production-level chatbots/AI agents (memory, model switching, stack choice)? : r/LangChain",
+      "url": "https://www.reddit.com/r/LangChain/comments/1o0l2wj/best_practices_for_building_productionlevel",
+      "published_at": null,
+      "snippet": "Best practices for building production-level chatbots/AI agents.",
+      "source": "Reddit"
+    },
+    {
+      "title": "LangChain AI Agents: Complete Implementation Guide 2025",
+      "url": "https://www.digitalapplied.com/blog/langchain-ai-agents-guide-2025",
+      "published_at": null,
+      "snippet": "Conversation state (messages, tool calls, results) saved to checkpointer for future turns.",
+      "source": "Digital Applied"
+    },
+    {
+      "title": "\ud83d\ude80 Choosing the Right AI Agent Framework in 2025? | Piyush Ranjan",
+      "url": "https://www.linkedin.com/posts/piyush-ranjan-9297a632_choosing-the-right-ai-agent-framework-activity-7338407824319799296-Ow9f",
+      "published_at": null,
+      "snippet": "For Production-Grade Systems: Orchestration & Multi-agent Collaboration \u2192 LangChain, AutoGen, LangGraph, CrewAI.",
+      "source": "LinkedIn"
+    },
+    {
+      "title": "Agentic AI #3 \u2014 Top AI Agent Frameworks in 2025: LangChain, AutoGen, CrewAI & Beyond",
+      "url": "https://medium.com/@iamanraghuvanshi/agentic-ai-3-top-ai-agent-frameworks-in-2025-langchain-autogen-crewai-beyond-2fc3388e7dec",
+      "published_at": null,
+      "snippet": "LangChain is a go-to framework for developers who want control and composability.",
+      "source": "Medium"
+    },
+    {
+      "title": "How to think about agent frameworks",
+      "url": "https://www.langchain.com/blog/how-to-think-about-agent-frameworks",
+      "published_at": null,
+      "snippet": "LangGraph is best thought of as an orchestration framework (with both declarative and imperative APIs), with a series of agent abstractions built on top.",
+      "source": "LangChain Blog"
+    },
+    {
+      "title": "How and when to build multi-agent systems - LangChain",
+      "url": "https://www.langchain.com/blog/how-and-when-to-build-multi-agent-systems",
+      "published_at": "2025-06-16",
+      "snippet": "Anthropic\u2019s blog post also contains some wisdom for where multi-agent systems may or may not work best.",
+      "source": "LangChain Blog"
+    },
+    {
+      "title": "Deep Agents vs LangChain vs LangGraph",
+      "url": "https://www.langchain.com/blog/deep-agents-vs-langchain-vs-langgraph",
+      "published_at": "2026-08-06",
+      "snippet": "Start with Deep Agents' create_deep_agent if you're building or reworking an agent. Pick up LangChain's create_agent for more fine-grained control.",
+      "source": "LangChain Blog"
+    },
+    {
+      "title": "LangChain Agents vs. LangGraph Agents: When to Use Each (A Practical Decision Framework)",
+      "url": "https://medium.com/@sivakami.kanda/langchain-agents-vs-langgraph-agents-when-to-use-each-a-practical-decision-framework-abc9b451a627",
+      "published_at": "2025-12-19",
+      "snippet": "Agents gives us the flexibility at the cost of control. Graphs gives us control at the cost of upfront design.",
+      "source": "Medium"
+    },
+    {
+      "title": "LangChain vs. LangGraph: Comparing AI Agent Frameworks",
+      "url": "https://oxylabs.io/blog/langgraph-vs-langchain",
+      "published_at": null,
+      "snippet": "LangChain and LangGraph both offer distinct approaches to building agents.",
+      "source": "Oxylabs"
+    },
+    {
+      "title": "Stop Confusing LangChain, LangGraph, and LangSmith",
+      "url": "https://www.youtube.com/watch?v=e-GR3PlEOVU&vl=en",
+      "published_at": null,
+      "snippet": "If you are prototyping something small, you probably don't need this stack. Where it earns its complexity is multi-step pipelines, dynamic agents, and systems you need to evaluate and iterate on over time.",
+      "source": "YouTube"
+    },
+    {
+      "title": "LangChain vs LangGraph: A Tale of Two Frameworks - YouTube",
+      "url": "https://www.youtube.com/watch?v=qAF1NjEVHhY",
+      "published_at": null,
+      "snippet": "LangChain and LangGraph, two powerful frameworks for building applications that make use of large language models.",
+      "source": "YouTube"
+    },
+    {
+      "title": "LangGraph: Agent Orchestration Framework for Reliable AI ...",
+      "url": "https://www.langchain.com/langgraph",
+      "published_at": null,
+      "snippet": "LangGraph sets the foundation for how we can build and scale AI workloads \u2014 from conversational agents, complex task automation, to custom LLM-backed experiences.",
+      "source": "LangChain"
+    },
+    {
+      "title": "LangChain V1 Tutorial: Build AI Agents Step-by-Step",
+      "url": "https://www.youtube.com/watch?v=VakUALskhyc",
+      "published_at": null,
+      "snippet": "LangChain V1 is finally here \u2014 and it changes everything! In this video, we\u2019ll explore the brand-new LangChain V1 release.",
+      "source": "YouTube"
+    },
+    {
+      "title": "Using LangChain Tools to Build an AI Agent with Granite | IBM",
+      "url": "https://www.ibm.com/think/tutorials/using-langchain-tools-to-build-an-ai-agent",
+      "published_at": null,
+      "snippet": "This step will open a Jupyter Notebook environment where you can copy the code from this tutorial.",
+      "source": "IBM"
+    },
+    {
+      "title": "Medium",
+      "url": "https://medium.com/@dvasquez.422/building-a-simple-ai-agent-1e2f2b369b25",
+      "published_at": null,
+      "snippet": "In this article, I will show you how to build a simple app to do just this. I will be building the groundwork for an AI agent.",
+      "source": "Medium"
+    },
+    {
+      "title": "Introduction to LangChain: Build AI Agents with Python",
+      "url": "https://academy.langchain.com/courses/foundation-introduction-to-langchain-python",
+      "published_at": null,
+      "snippet": "Learn how to build AI agents with LangChain. Get started quickly using pre-built architectures and model integrations, then debug your agents with LangSmith Observability.",
+      "source": "LangChain Academy"
+    }
+  ]
+}

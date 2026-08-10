@@ -1,0 +1,352 @@
+{
+  "blog_id": "20260810-161223-9676a3cf-738e-4062-baa1-374e1e8378ce",
+  "updated_at": "2026-08-10T16:12:23",
+  "title": "How ChatGPT Optimizes Its Agent Loop: Harness, API, and Inference",
+  "filename": "how_chatgpt_optimizes_its_agent_loop_harness,_api,_and_inference.md",
+  "created_at": "2026-08-10T16:12:23",
+  "topic": "How ChatGPT Optimizes its Agent Loop. Harness, API, and Inference",
+  "audience": "string",
+  "tone": "string",
+  "blog_kind": "explainer",
+  "research_mode": "auto",
+  "include_images": false,
+  "output_format": "md",
+  "mode": "hybrid",
+  "needs_research": true,
+  "queries": [
+    "ChatGPT agent loop optimization techniques",
+    "OpenAI harness API inference agent loop",
+    "ChatGPT agent loop architecture and design",
+    "OpenAI agent loop best practices 2025",
+    "ChatGPT inference optimization for agent loops",
+    "OpenAI API agent loop implementation",
+    "ChatGPT harness and tool use optimization",
+    "OpenAI agent loop performance tuning",
+    "ChatGPT agent loop recent improvements",
+    "OpenAI agent loop inference latency optimization"
+  ],
+  "sources": [
+    {
+      "title": "How ChatGPT Optimizes its Agent Loop: Harness, API, and ...",
+      "url": "https://blog.bytebytego.com/p/how-chatgpt-optimizes-its-agent-loop",
+      "published_at": null,
+      "snippet": "The harness avoids resending what the server already has, the API avoids reprocessing what it has already processed, and inference avoids recomputing what it has already computed.",
+      "source": "blog.bytebytego.com"
+    },
+    {
+      "title": "How ChatGPT Optimizes its Agent Loop: Harness, API, and...",
+      "url": "https://daily.dev/posts/how-chatgpt-optimizes-its-agent-loop-harness-api-and-inference-tubtaum7v",
+      "published_at": null,
+      "snippet": "OpenAI engineers share the efficiency techniques behind Codex and ChatGPT Work across three layers of their agentic AI stack.",
+      "source": "daily.dev"
+    },
+    {
+      "title": "The Agent Loop Decoded",
+      "url": "https://blogs.oracle.com/developers/the-agent-loop-decoded-three-levels-every-agent-engineer-must-know",
+      "published_at": null,
+      "snippet": "In a Level 3 agent loop, some operations should be automatic... deliberate boundary between programmatic and agent-triggered operations, with techniques such as compaction, tool output offloading, and semantic tool discovery.",
+      "source": "blogs.oracle.com"
+    },
+    {
+      "title": "Notorious Agent Loops",
+      "url": "https://techtalkwithsriks.medium.com/notorious-agent-loops-c4cc05b859b5",
+      "published_at": null,
+      "snippet": "Agent loops flip the prompt\u2194one-off response paradigm by giving the AI autonomy to keep itself 'in the loop'.",
+      "source": "techtalkwithsriks.medium.com"
+    },
+    {
+      "title": "Agentic Auto-Scheduling: An Experimental Study of LLM-Guided Loop Optimization",
+      "url": "https://arxiv.org/html/2511.00592v1",
+      "published_at": null,
+      "snippet": "ComPilot\u2019s effectiveness seems to hinge on the combination of the LLM\u2019s pattern recognition and reasoning with the compiler\u2019s rigorous analysis and execution feedback.",
+      "source": "arxiv.org"
+    },
+    {
+      "title": "Build an Agent Improvement Loop with Traces, Evals, and ...",
+      "url": "https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop",
+      "published_at": null,
+      "snippet": "The full loop matters: traces capture behavior, human feedback adds judgment, evals preserve what the system should do, HALO turns the evidence into ranked harness changes, and Codex can implement the next pass.",
+      "source": "developers.openai.com"
+    },
+    {
+      "title": "Harness in AI Agents",
+      "url": "https://pub.towardsai.net/harness-in-ai-agents-765ff91ccaeb",
+      "published_at": null,
+      "snippet": "OpenAI\u2019s Codex articles describe the agent loop as the core logic that orchestrates interaction between the user, the model, and the tools, and explicitly call that runtime the harness.",
+      "source": "pub.towardsai.net"
+    },
+    {
+      "title": "How OpenAI built Codex: inside the agent loop and harness",
+      "url": "https://swequiz.com/articles/openai-codex-architecture",
+      "published_at": null,
+      "snippet": "At the core of every AI agent is the agent loop. In Codex, it works like this: build prompt, send to Responses API, execute tool calls, append results, repeat until final assistant message.",
+      "source": "swequiz.com"
+    },
+    {
+      "title": "How ChatGPT Optimizes its Agent Loop: Harness, API, and Inference",
+      "url": "https://www.threads.com/@bytebytego/post/DbYcgmoFLZ5/how-chat-gpt-optimizes-its-agent-loop-harness-api-and-inference-ai-labs-keep",
+      "published_at": "2026-07-29",
+      "snippet": "Cost-per-successful-task is usually dominated by retries... The cheapest lever often isn't cheaper inference, it's a deterministic validator gate between steps.",
+      "source": "threads.com"
+    },
+    {
+      "title": "Building Production-Ready AI Agents: OpenAI Codex CLI Architecture and Agent Loop Design",
+      "url": "https://www.zenml.io/llmops-database/building-production-ready-ai-agents-openai-codex-cli-architecture-and-agent-loop-design",
+      "published_at": null,
+      "snippet": "Codex CLI uses the Responses API for model inference... supports Azure-hosted Responses API endpoints, demonstrating multi-cloud.",
+      "source": "zenml.io"
+    },
+    {
+      "title": "The canonical agent architecture: A while loop with tools",
+      "url": "https://www.braintrust.dev/blog/agent-while-loop",
+      "published_at": null,
+      "snippet": "At its core, an agent is an LLM, a system prompt, and tools. Keeping your system design to just those components means your work will stand the test of time.",
+      "source": "braintrust.dev"
+    },
+    {
+      "title": "What Is the AI Agent Loop? The Core Architecture Behind Autonomous AI Systems",
+      "url": "https://blogs.oracle.com/developers/what-is-the-ai-agent-loop-the-core-architecture-behind-autonomous-ai-systems",
+      "published_at": null,
+      "snippet": "Every major AI organisation has converged on the same underlying execution pattern. The difference is one while loop.",
+      "source": "blogs.oracle.com"
+    },
+    {
+      "title": "Unrolling the Codex agent loop",
+      "url": "https://openai.com/index/unrolling-the-codex-agent-loop",
+      "published_at": null,
+      "snippet": "Because the agent can execute tool calls that modify the local environment, its 'output' is not limited to the assistant message. In many cases, the primary output is the code it writes or edits.",
+      "source": "openai.com"
+    },
+    {
+      "title": "What Is An Agent Loop - The Complete Guide to AI Agent Architecture",
+      "url": "https://www.vincirufus.com/en/posts/agent-loop",
+      "published_at": null,
+      "snippet": "The feedback phase closes the loop through result evaluation, strategy adjustment, memory formation, and error analysis.",
+      "source": "vincirufus.com"
+    },
+    {
+      "title": "The Agent Loop Architecture",
+      "url": "https://www.inngest.com/blog/agent-loop-architecture",
+      "published_at": null,
+      "snippet": "Durability isn't just a property of the loop. It's the entire execution layer underneath it.",
+      "source": "inngest.com"
+    },
+    {
+      "title": "OpenAI\u2019s Agent Best Practices: The Blueprint We\u2019ve All Been Waiting For",
+      "url": "https://lekha-bhan88.medium.com/openais-agent-best-practices-the-blueprint-we-ve-all-been-waiting-for-c86bc1f805e1",
+      "published_at": "2025-04-21",
+      "snippet": "When OpenAI quietly released their 'Practical Guide to Building Agents', it didn\u2019t come with the usual fanfare.",
+      "source": "lekha-bhan88.medium.com"
+    },
+    {
+      "title": "OpenAI for Developers in 2025",
+      "url": "https://developers.openai.com/blog/openai-for-developers-2025",
+      "published_at": null,
+      "snippet": "Web search provided a simple retrieval primitive for agents... Code Interpreter ran Python in sandboxed containers for data work.",
+      "source": "developers.openai.com"
+    },
+    {
+      "title": "Best Practices for AI Prompting 2025?",
+      "url": "https://www.reddit.com/r/AI_Agents/comments/1nytnea/best_practices_for_ai_prompting_2025",
+      "published_at": null,
+      "snippet": "Leverage Prompt Libraries... Iterate Based on Feedback... layer roles, goals, context, steps, and a self\u2011critique pass.",
+      "source": "reddit.com"
+    },
+    {
+      "title": "Best Practices for Ensuring AI Agent Performance and Reliability",
+      "url": "https://dev.to/kuldeep_paul/best-practices-for-ensuring-ai-agent-performance-and-reliability-4ok0",
+      "published_at": null,
+      "snippet": "Deploy new agent versions gradually... Use A/B testing to compare performance and user impact.",
+      "source": "dev.to"
+    },
+    {
+      "title": "human-in-the-loop \u00b7 Issue #378 \u00b7 openai/openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python/issues/378",
+      "published_at": "2025-03-28",
+      "snippet": "Human Review/Approval Step for Agent Tool Execution.",
+      "source": "github.com"
+    },
+    {
+      "title": "A practical guide to building agents",
+      "url": "https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents",
+      "published_at": "2025-12-17",
+      "snippet": "Start with strong foundations: pair capable models with well-defined tools and clear, structured instructions. Use orchestration patterns that match your complexity level.",
+      "source": "openai.com"
+    },
+    {
+      "title": "ChatGPT",
+      "url": "https://en.wikipedia.org/wiki/ChatGPT",
+      "published_at": null,
+      "snippet": "GPT-5.5 ... Designed for complex, multi-step professional work including agentic coding and computer use.",
+      "source": "en.wikipedia.org"
+    },
+    {
+      "title": "Introducing ChatGPT",
+      "url": "https://openai.com/index/chatgpt",
+      "published_at": null,
+      "snippet": "We performed several iterations of this process. The model is often excessively verbose...",
+      "source": "openai.com"
+    },
+    {
+      "title": "What is ChatGPT?",
+      "url": "https://www.ibm.com/think/topics/chatgpt",
+      "published_at": null,
+      "snippet": "AI-powered chatbots such as ChatGPT work by using complex machine learning algorithms that compare user input to the contents of their datasets.",
+      "source": "ibm.com"
+    },
+    {
+      "title": "Introducing ChatGPT search",
+      "url": "https://openai.com/index/introducing-chatgpt-search",
+      "published_at": null,
+      "snippet": "ChatGPT can now search the web in a much better way than before. You can get fast, timely answers with links to relevant web sources.",
+      "source": "openai.com"
+    },
+    {
+      "title": "ChatGPT: Chat, Work, Create & Code with AI",
+      "url": "https://chatgpt.com",
+      "published_at": null,
+      "snippet": "ChatGPT is AI. By using it, you agree to our Terms & Privacy Policy. Chats may be reviewed and used to improve our AI models.",
+      "source": "chatgpt.com"
+    },
+    {
+      "title": "ChatGPT - App Store - Apple",
+      "url": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+      "published_at": null,
+      "snippet": "Introducing ChatGPT for iOS: OpenAI\u2019s latest advancements at your fingertips. This official app is free, syncs your history across devices.",
+      "source": "apps.apple.com"
+    },
+    {
+      "title": "The Anatomy of an Agent Loop",
+      "url": "https://stevekinney.com/writing/agent-loops",
+      "published_at": null,
+      "snippet": "The OpenAI Agents SDK ... has the cleanest architecture for teaching purposes. The core loop is a `while (true)` that calls `runSingleTurn()` on each iteration.",
+      "source": "stevekinney.com"
+    },
+    {
+      "title": "The Power of Autonomy: Unveiling the Agent Loop in OpenAI\u2019s Agent SDK",
+      "url": "https://medium.com/@mohsinlashari897915/the-power-of-autonomy-unveiling-the-agent-loop-in-openais-agent-sdk-40e93a49f78e",
+      "published_at": null,
+      "snippet": "The agent loop in the OpenAI Agent SDK is a powerful tool that makes building autonomous AI systems accessible and efficient.",
+      "source": "medium.com"
+    },
+    {
+      "title": "Basic agentic loop with OpenAI and tool calling",
+      "url": "https://docs.temporal.io/ai-cookbook/agentic-loop-tool-call-openai-python",
+      "published_at": null,
+      "snippet": "This example implements a basic agentic loop that has a set of tools available. If the agent determines no tools are needed, it will respond directly.",
+      "source": "docs.temporal.io"
+    },
+    {
+      "title": "Getting Started with OpenAI Agents SDK",
+      "url": "https://codesignal.com/learn/courses/introduction-to-openai-agents-sdk-in-python/lessons/creating-and-running-your-first-openai-agent-in-python-1",
+      "published_at": null,
+      "snippet": "A key feature of the OpenAI Agents SDK is the agent loop. This loop is what sets an agent apart from a simple chat model.",
+      "source": "codesignal.com"
+    },
+    {
+      "title": "Agents SDK | OpenAI API",
+      "url": "https://developers.openai.com/api/docs/guides/agents",
+      "published_at": null,
+      "snippet": "Use the Responses API when you want to own the loop. Use the Agents SDK when you want the SDK to run it.",
+      "source": "developers.openai.com"
+    },
+    {
+      "title": "Running agents | OpenAI API",
+      "url": "https://developers.openai.com/api/docs/guides/agents/running-agents",
+      "published_at": null,
+      "snippet": "One SDK run is one application-level turn. The runner keeps looping until it reaches a real stopping point.",
+      "source": "developers.openai.com"
+    },
+    {
+      "title": "Running agents - OpenAI Agents SDK",
+      "url": "https://openai.github.io/openai-agents-python/running_agents",
+      "published_at": null,
+      "snippet": "When you use the run method in `Runner`, you pass in a starting agent and input. The runner then runs a loop.",
+      "source": "openai.github.io"
+    },
+    {
+      "title": "The Infinite Loop: How ChatGPT's Latest Update Is Consuming My Time",
+      "url": "https://community.openai.com/t/the-infinite-loop-how-chatgpts-latest-update-is-consuming-my-time/79395",
+      "published_at": null,
+      "snippet": "Since the recent update to ChatGPT, I have been experiencing significant issues with the AI\u2019s new behaviors. It only uses the previous message and prompt.",
+      "source": "community.openai.com"
+    },
+    {
+      "title": "Introducing ChatGPT agent: bridging research and action",
+      "url": "https://openai.com/index/introducing-chatgpt-agent",
+      "published_at": "2025-07-17",
+      "snippet": "ChatGPT now thinks and acts, proactively choosing from a toolbox of agentic skills to complete tasks for you using its own computer.",
+      "source": "openai.com"
+    },
+    {
+      "title": "ChatGPT\u2019s New Agent Mode is 6/10. Here\u2019s the Brutal Truth About What Actually Works.",
+      "url": "https://aakashgupta.medium.com/chatgpts-newagent-mode-is-6-10-here-s-the-brutal-truth-about-what-actually-works-2e51481be0e4",
+      "published_at": "2025-07-27",
+      "snippet": "After 20 hours of systematic testing, ChatGPT agent mode emerges as a capable tool with clear strengths and significant limitations.",
+      "source": "aakashgupta.medium.com"
+    },
+    {
+      "title": "NEW ChatGPT AI Agents Update is INSANE!",
+      "url": "https://www.youtube.com/watch?v=kYGazm2rGUI",
+      "published_at": null,
+      "snippet": "You can use these agent workspaces to generate automated AI agents that work 24/7 for you. There are full audit logs and approval gates.",
+      "source": "youtube.com"
+    },
+    {
+      "title": "\ud83c\udf54\ud83e\udde0 How OpenAI Agents Got 40% Faster (System Design)",
+      "url": "https://hungrymindsdev.substack.com/p/how-openai-agents-got-40-faster-system",
+      "published_at": null,
+      "snippet": "Persistent WebSocket connections: Replace synchronous HTTP calls with a single long-lived connection that maintains state across the agent loop lifecycle.",
+      "source": "hungrymindsdev.substack.com"
+    },
+    {
+      "title": "Latency optimization | OpenAI API",
+      "url": "https://developers.openai.com/api/docs/guides/latency-optimization",
+      "published_at": null,
+      "snippet": "Predicted outputs let you significantly reduce latency of a generation when you know most of the output ahead of time, such as code editing tasks.",
+      "source": "developers.openai.com"
+    },
+    {
+      "title": "How to reduce latency in AI agent responses.",
+      "url": "https://www.fiddler.ai/blog/reducing-latency-enterprise-ai-applications",
+      "published_at": null,
+      "snippet": "Latency optimization starts with budgeting. If your SLA requires under 500ms responses, allocate roughly 100ms to retrieval, 300ms to inference, and 100ms to post-processing.",
+      "source": "fiddler.ai"
+    },
+    {
+      "title": "Accelerating AI Agent Inference & Performance in Production",
+      "url": "https://medium.com/@kyeg/accelerating-ai-agent-inference-performance-in-production-874b427cb41b",
+      "published_at": null,
+      "snippet": "Implementing cache prompting can result in zero-inference latency for a significant subset of calls.",
+      "source": "medium.com"
+    },
+    {
+      "title": "Understanding AI Agent Latency and Performance",
+      "url": "https://www.mindstudio.ai/blog/ai-agent-latency-performance",
+      "published_at": null,
+      "snippet": "Latency and performance optimization isn\u2019t just about speed\u2014it\u2019s about making AI agents economically viable.",
+      "source": "mindstudio.ai"
+    },
+    {
+      "title": "Stop Burning Tokens: The Tests-First Agent Loop That Cuts Thrash by 50%",
+      "url": "https://medium.com/@Micheal-Lanham/stop-burning-tokens-the-tests-first-agent-loop-that-cuts-thrash-by-50-d66bd62a948e",
+      "published_at": null,
+      "snippet": "A naive loop might have taken 8\u201312 iterations, declared 'done' with subtle bugs, or spun indefinitely.",
+      "source": "medium.com"
+    },
+    {
+      "title": "The unreasonable effectiveness of an LLM agent loop with ...",
+      "url": "https://news.ycombinator.com/item?id=43998472",
+      "published_at": null,
+      "snippet": "I don't think you need an overseer for this, you can just have the agent self-assess at each step whether it's making material progress or if it's caught in a loop.",
+      "source": "news.ycombinator.com"
+    },
+    {
+      "title": "Human in Loop Pattern | OpenAI Agent SDK with Typescript",
+      "url": "https://www.youtube.com/watch?v=H-R2gmDkpps",
+      "published_at": null,
+      "snippet": "Need approval true means you don't want that tool to be called automatically; you have to take my approval.",
+      "source": "youtube.com"
+    }
+  ]
+}
