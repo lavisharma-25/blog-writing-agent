@@ -3,10 +3,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from backend.src.core.settings import settings
 
 
-def load_prompt(
-    agent: str,
-    human_template: str | None = None,
-) -> ChatPromptTemplate:
+def load_prompt(agent: str, human_template: str | None = None) -> ChatPromptTemplate:
     """
     Loads prompts/{agent}/system.md and returns a ChatPromptTemplate.
 
