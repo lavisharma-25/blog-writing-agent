@@ -1,7 +1,7 @@
 from fastapi import HTTPException, status
 
-from backend.models import schema
 from backend.graph.builder import workflow
+from backend.models.schema.workflow import WorkflowRequest, WorkflowResponse
 
 
 def run_workflow(topic: str) -> dict:
@@ -32,14 +32,14 @@ def run_workflow(topic: str) -> dict:
         raise RuntimeError("Failed to execute workflow.") from exc
 
 
-async def execute_workflow(request: schema.WorkflowRequest) -> schema.WorkflowResponse:
+async def execute_workflow(request: WorkflowRequest) -> WorkflowResponse:
     """
     Execute the blog writing workflow.
     """
     try:
         result = run_workflow(request.topic)
 
-        return schema.WorkflowResponse(
+        return WorkflowResponse(
             status="success",
             data=result,
         )

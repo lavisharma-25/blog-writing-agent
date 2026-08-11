@@ -1,8 +1,8 @@
-from backend.models import schema
 from backend.models.state import State
 from backend.core.logging import logger
 from backend.graph.prompt import load_prompt
 from backend.services.llm_service import llm
+from backend.models.schema.nodes import RouterDecision
 
 
 def router_node(state: State) -> dict:
@@ -15,7 +15,7 @@ def router_node(state: State) -> dict:
 
     messages = router_prompt.format_messages(topic=state.topic)
 
-    router_llm = llm.with_structured_output(schema.RouterDecision, method="json_mode")
+    router_llm = llm.with_structured_output(RouterDecision, method="json_mode")
 
     decision = router_llm.invoke(messages)
 

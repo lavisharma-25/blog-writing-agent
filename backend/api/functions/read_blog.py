@@ -1,11 +1,11 @@
 from fastapi import HTTPException
 
-from backend.models import schema
 from backend.core.settings import settings
 from backend.utils.metadata_utils import read_metadata
+from backend.models.schema.read import ReadBlogRequest, ReadBlogResponse
 
 
-async def read_blog(request: schema.ReadBlogRequest) -> schema.ReadBlogResponse:
+async def read_blog(request: ReadBlogRequest) -> ReadBlogResponse:
 
     blog_metadata = await read_metadata(request.blog_id)
 
@@ -17,7 +17,7 @@ async def read_blog(request: schema.ReadBlogRequest) -> schema.ReadBlogResponse:
 
     blog_data = blog_path.read_text(encoding="utf-8")
 
-    return schema.ReadBlogResponse(
+    return ReadBlogResponse(
             status="success",
             data={
                 "blog_id": blog_metadata.get("blog_id"),

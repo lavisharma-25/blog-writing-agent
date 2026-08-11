@@ -5,10 +5,10 @@ from datetime import datetime
 from pydantic import BaseModel
 from fastapi import HTTPException, status
 
-from backend.models import schema
 from backend.core.logging import logger
 from backend.graph.builder import workflow
 from backend.utils.metadata_utils import write_metadata
+from backend.models.schema.workflow import WorkflowRequest, WorkflowResponse
 
 
 def _to_plain(value: Any) -> Any:
@@ -64,7 +64,7 @@ def _run_workflow(topic: str) -> dict:
         raise RuntimeError("Failed to execute workflow.") from exc
 
 
-async def generate_blog(request: schema.WorkflowRequest) -> schema.WorkflowResponse:
+async def generate_blog(request: WorkflowRequest) -> WorkflowResponse:
     """Generate a blog and persist metadata for list/read/export endpoints."""
 
     try:
@@ -103,7 +103,7 @@ async def generate_blog(request: schema.WorkflowRequest) -> schema.WorkflowRespo
             },
         )
 
-        return schema.WorkflowResponse(
+        return WorkflowResponse(
             status="success",
             data={
                 **plain_result,

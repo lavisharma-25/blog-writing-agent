@@ -2,13 +2,13 @@ from io import BytesIO
 from fastapi import HTTPException
 from fastapi.responses import StreamingResponse
 
-from backend.models import schema
 from backend.core.settings import settings
 from backend.utils.metadata_utils import read_metadata
 from backend.services.converter_service.html_converter import md_to_html
+from backend.models.schema.export import ExportBlogRequest
 
 
-async def export_blog(request: schema.ExportBlogRequest) -> StreamingResponse:
+async def export_blog(request: ExportBlogRequest) -> StreamingResponse:
     """Export a blog in the specified format (Markdown, HTML, PDF, or DOCX)."""
 
     blog_metadata = await read_metadata(request.blog_id)

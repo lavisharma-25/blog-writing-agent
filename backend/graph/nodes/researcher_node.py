@@ -1,10 +1,10 @@
 from typing import List
 
-from backend.models import schema
 from backend.models.state import State
 from backend.core.logging import logger
 from backend.graph.prompt import load_prompt
 from backend.services.llm_service import llm
+from backend.models.schema.nodes import EvidencePack
 from backend.services.web_search_service import tavily_search
 
 
@@ -32,7 +32,7 @@ def researcher_node(state: State) -> dict:
 
     messages = researcher_prompt.format_messages(raw_results=raw_results)
 
-    researcher_llm = llm.with_structured_output(schema.EvidencePack, method="json_mode")
+    researcher_llm = llm.with_structured_output(EvidencePack, method="json_mode")
     
     response = researcher_llm.invoke(messages)
 

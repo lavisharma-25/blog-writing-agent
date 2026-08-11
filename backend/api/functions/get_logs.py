@@ -1,11 +1,11 @@
 from datetime import datetime
 from fastapi import HTTPException
 
-from backend.models import schema
 from backend.core.settings import settings
+from backend.models.schema.logs import LogsRequest, LogsResponse
 
 
-def get_logs(request: schema.LogsRequest) -> schema.LogsResponse:
+def get_logs(request: LogsRequest) -> LogsResponse:
     """
     Retrieve log files or log content based on the provided value.
 
@@ -53,7 +53,7 @@ def get_logs(request: schema.LogsRequest) -> schema.LogsResponse:
             reverse=True,
         )
 
-        return schema.LogsResponse(
+        return LogsResponse(
             status="success",
             files=files,
             content=[],
@@ -71,7 +71,7 @@ def get_logs(request: schema.LogsRequest) -> schema.LogsResponse:
             reverse=True,
         )
 
-        return schema.LogsResponse(
+        return LogsResponse(
             status="success",
             files=None if not files else files,
             content=[],
@@ -94,7 +94,7 @@ def get_logs(request: schema.LogsRequest) -> schema.LogsResponse:
     with open(file_path, "r", encoding="utf-8") as f:
         logs = [line.rstrip("\n") for line in f if line.strip()]
 
-    return schema.LogsResponse(
+    return LogsResponse(
         status="success",
         files=[file_path.name],
         content=logs,

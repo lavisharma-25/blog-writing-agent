@@ -1,7 +1,7 @@
-from backend.models import schema
 from backend.core.logging import logger
 from backend.graph.prompt import load_prompt
 from backend.services.llm_service import llm
+from backend.models.schema.nodes import EvidenceItem
 
 
 def writer_node(payload: dict) -> dict:
@@ -17,7 +17,7 @@ def writer_node(payload: dict) -> dict:
 
     bullets_text = "\n- " + "\n- ".join(task["bullets"])
 
-    evidence = [schema.EvidenceItem(**e) for e in payload.get("evidence", [])]
+    evidence = [EvidenceItem(**e) for e in payload.get("evidence", [])]
 
     evidence_text = ""
     if evidence:
