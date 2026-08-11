@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from fastapi import HTTPException, status
 
 from backend.core.logging import logger
-from backend.graph.builder import workflow
+from backend.graph.builder import get_workflow
 from backend.utils.metadata_utils import write_metadata
 from backend.models.schema.workflow import WorkflowRequest, WorkflowResponse
 
@@ -58,6 +58,7 @@ def _run_workflow(topic: str) -> dict:
             "final": "",
         }
 
+        workflow = get_workflow()
         return workflow.invoke(state)
 
     except Exception as exc:

@@ -1,7 +1,8 @@
-from backend.graph.builder import workflow
+from backend.graph.builder import get_workflow
 
 try:
     def run_workflow(topic: str):
+        workflow = get_workflow()
         out = workflow.invoke(
             {
                 "topic": topic,

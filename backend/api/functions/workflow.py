@@ -1,6 +1,6 @@
 from fastapi import HTTPException, status
 
-from backend.graph.builder import workflow
+from backend.graph.builder import get_workflow
 from backend.models.schema.workflow import WorkflowRequest, WorkflowResponse
 
 
@@ -26,6 +26,7 @@ def run_workflow(topic: str) -> dict:
             "final": "",
         }
 
+        workflow = get_workflow()
         return workflow.invoke(state)
 
     except Exception as exc:
