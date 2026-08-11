@@ -1,0 +1,18 @@
+{
+  "blog_id": "20260811-120044-8398d156-bd5a-4da1-867f-e09898562089",
+  "updated_at": "2026-08-11T12:00:44",
+  "title": "Monolith vs Microservices: When Should You Choose Each?",
+  "filename": "monolith_vs_microservices_when_should_you_choose_each.md",
+  "created_at": "2026-08-11T12:00:44",
+  "topic": "Monolith vs Microservices: When Should You Choose Each?",
+  "audience": "string",
+  "tone": "string",
+  "blog_kind": "explainer",
+  "research_mode": "auto",
+  "include_images": false,
+  "output_format": "md",
+  "mode": "closed_book",
+  "needs_research": false,
+  "queries": [],
+  "sources": []
+}
