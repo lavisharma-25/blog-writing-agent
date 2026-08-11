@@ -5,9 +5,9 @@ from backend.utils.metadata_utils import read_metadata
 from backend.models.schema.read import ReadBlogRequest, ReadBlogResponse
 
 
-async def read_blog(request: ReadBlogRequest) -> ReadBlogResponse:
+def read_blog(request: ReadBlogRequest) -> ReadBlogResponse:
 
-    blog_metadata = await read_metadata(request.blog_id)
+    blog_metadata = read_metadata(request.blog_id)
 
     blog_filename = blog_metadata.get("filename")
     blog_path = settings.OUTPUT_DIR / blog_filename

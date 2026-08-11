@@ -65,7 +65,7 @@ def _run_workflow(topic: str) -> dict:
         raise RuntimeError("Failed to execute workflow.") from exc
 
 
-async def generate_blog(request: WorkflowRequest) -> WorkflowResponse:
+def generate_blog(request: WorkflowRequest) -> WorkflowResponse:
     """Generate a blog and persist metadata for list/read/export endpoints."""
 
     try:
@@ -84,7 +84,7 @@ async def generate_blog(request: WorkflowRequest) -> WorkflowResponse:
         created_at = datetime.now().isoformat(timespec="seconds")
         blog_id = f"{datetime.now().strftime('%Y%m%d-%H%M%S')}-{uuid.uuid4()}"
 
-        await write_metadata(
+        write_metadata(
             blog_id,
             {
                 "title": title,

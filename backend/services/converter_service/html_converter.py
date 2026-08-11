@@ -2,7 +2,7 @@ import re
 import html
 
 
-async def md_to_html(markdown: str) -> str:
+def md_to_html(markdown: str) -> str:
     lines = markdown.splitlines()
     body: list[str] = []
     in_list = False

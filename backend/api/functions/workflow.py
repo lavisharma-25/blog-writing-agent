@@ -33,7 +33,7 @@ def run_workflow(topic: str) -> dict:
         raise RuntimeError("Failed to execute workflow.") from exc
 
 
-async def execute_workflow(request: WorkflowRequest) -> WorkflowResponse:
+def execute_workflow(request: WorkflowRequest) -> WorkflowResponse:
     """
     Execute the blog writing workflow.
     """

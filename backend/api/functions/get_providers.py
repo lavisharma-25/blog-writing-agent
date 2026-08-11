@@ -2,7 +2,7 @@ from backend.core.settings import settings
 from backend.models.schema.provider import ProvidersResponse
 
 
-async def get_providers() -> ProvidersResponse:
+def get_providers() -> ProvidersResponse:
 
     custom_provider = settings.CUSTOM_PROVIDER if settings.CUSTOM_PROVIDER != "None" else None
 

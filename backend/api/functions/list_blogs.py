@@ -3,13 +3,15 @@ from backend.utils.metadata_utils import read_metadata
 from backend.models.schema.list import BlogListResponse
 
 
-async def list_blogs() -> BlogListResponse:
+def list_blogs() -> BlogListResponse:
+
     blogs = []
+    
     for path in sorted(settings.OUTPUT_DIR.glob("*.json"), key=lambda item: item.stat().st_mtime, reverse=True):
 
         blog_id = path.stem
 
-        metadata = await read_metadata(blog_id)
+        metadata = read_metadata(blog_id)
 
         blogs.append(
             {

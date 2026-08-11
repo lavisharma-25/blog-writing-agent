@@ -8,10 +8,10 @@ from backend.services.converter_service.html_converter import md_to_html
 from backend.models.schema.export import ExportBlogRequest
 
 
-async def export_blog(request: ExportBlogRequest) -> StreamingResponse:
+def export_blog(request: ExportBlogRequest) -> StreamingResponse:
     """Export a blog in the specified format (Markdown, HTML, PDF, or DOCX)."""
 
-    blog_metadata = await read_metadata(request.blog_id)
+    blog_metadata = read_metadata(request.blog_id)
 
     blog_path = settings.OUTPUT_DIR / blog_metadata["filename"]
     blog_data = blog_path.read_text(encoding="utf-8")
@@ -24,7 +24,7 @@ async def export_blog(request: ExportBlogRequest) -> StreamingResponse:
         download_name = f"{filename}.md"
 
     elif request.output_format == "html":
-        data = await md_to_html(blog_data)
+        data = md_to_html(blog_data)
         content = data.encode("utf-8")
         media_type = "text/html"
         download_name = f"{filename}.html"

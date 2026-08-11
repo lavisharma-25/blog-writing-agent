@@ -5,13 +5,13 @@ from backend.utils.metadata_utils import read_metadata
 from backend.models.schema.delete import DeleteBlogRequest, DeleteBlogResponse
 
 
-async def delete_blog(request: DeleteBlogRequest) -> DeleteBlogResponse:
+def delete_blog(request: DeleteBlogRequest) -> DeleteBlogResponse:
     """ Delete a blog and its associated metadata."""
 
     blog_id = request.blog_id
     
     metadata_path = settings.OUTPUT_DIR / f"{blog_id}.json"
-    blog_metadata = await read_metadata(blog_id)
+    blog_metadata = read_metadata(blog_id)
     
     blog_path = settings.OUTPUT_DIR / blog_metadata.get("filename")
     

@@ -6,7 +6,7 @@ from backend.core.logging import logger
 from backend.core.settings import settings
 
 
-async def read_metadata(blog_id: str) -> dict[str, Any]:
+def read_metadata(blog_id: str) -> dict[str, Any]:
     
     path = settings.OUTPUT_DIR / f"{blog_id}.json"
 
@@ -19,7 +19,7 @@ async def read_metadata(blog_id: str) -> dict[str, Any]:
         return {}
 
 
-async def write_metadata(blog_id: str, metadata: dict[str, Any]) -> None:
+def write_metadata(blog_id: str, metadata: dict[str, Any]) -> None:
 
     payload = {
         "blog_id": blog_id,
