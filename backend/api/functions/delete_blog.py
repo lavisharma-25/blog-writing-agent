@@ -1,31 +1,15 @@
 from fastapi import HTTPException
 
-from backend.core.settings import settings
-from backend.utils.metadata_utils import read_metadata
+from backend.services.blog_service import delete_blog_data
 from backend.models.schema.delete import DeleteBlogRequest, DeleteBlogResponse
 
 
 def delete_blog(request: DeleteBlogRequest) -> DeleteBlogResponse:
-    """ Delete a blog and its associated metadata."""
+    try:
+        return DeleteBlogResponse(
+            status="success",
+            data=delete_blog_data(request.blog_id),
+        )
 
-    blog_id = request.blog_id
-    
-    metadata_path = settings.OUTPUT_DIR / f"{blog_id}.json"
-    blog_metadata = read_metadata(blog_id)
-    
-    blog_path = settings.OUTPUT_DIR / blog_metadata.get("filename")
-    
-    if not blog_path.exists():
-        raise HTTPException(status_code=404, detail="Blog not found.")
-    blog_path.unlink()
-
-    if metadata_path.exists():
-        metadata_path.unlink()
-
-    return DeleteBlogResponse(
-        status="success",
-        data={
-            "filename": blog_path.name,
-            "metadata": str(metadata_path)
-        }     
-    )
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
