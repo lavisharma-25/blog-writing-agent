@@ -98,8 +98,6 @@ class LLMService:
         )
 
 
-llm = LLMService().create_llm()
-
-# if __name__ == "__main__":
-#     res = llm.invoke("Hello")
-#     print(res)
+@lru_cache(maxsize=1)
+def get_llm() -> Any:
+    return LLMService().create_llm()

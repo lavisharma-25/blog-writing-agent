@@ -1,8 +1,8 @@
 from backend.models.state import State
 from backend.core.logging import logger
 from backend.graph.prompt import load_prompt
-from backend.services.llm_service import llm
 from backend.models.schema.nodes import Plan
+from backend.services.llm_service import get_llm
 
 
 def planner_node(state: State) -> dict:
@@ -21,6 +21,7 @@ def planner_node(state: State) -> dict:
         evidence=[e.model_dump() for e in evidence]
     )
 
+    llm = get_llm()
     planner_llm = llm.with_structured_output(Plan, method="json_mode")
 
     plan = planner_llm.invoke(messages)

@@ -1,6 +1,6 @@
 from backend.core.logging import logger
 from backend.graph.prompt import load_prompt
-from backend.services.llm_service import llm
+from backend.services.llm_service import get_llm
 from backend.models.schema.nodes import EvidenceItem
 
 
@@ -50,6 +50,7 @@ def writer_node(payload: dict) -> dict:
         evidence=evidence_text
     )
 
+    llm = get_llm()
     section_md = llm.invoke(messages).content.strip()
 
     logger.info("Writer node completed for task_id=%s", task["id"])
