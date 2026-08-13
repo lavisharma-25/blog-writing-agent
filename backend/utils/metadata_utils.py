@@ -30,6 +30,9 @@ def read_metadata(blog_id: str) -> dict[str, Any]:
 
 def write_metadata(blog_id: str, metadata: dict[str, Any]) -> None:
 
+    blog_dir = get_blog_dir(blog_id)
+    blog_dir.mkdir(parents=True, exist_ok=True)
+    
     payload = {
         "blog_id": blog_id,
         **metadata,

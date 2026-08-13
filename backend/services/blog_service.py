@@ -21,7 +21,7 @@ def read_blog_data(blog_id: str) -> dict:
     blog_data = blog_path.read_text(encoding="utf-8")
 
     return {
-        "blog_id": "blog_id",
+        "blog_id": blog_id,
         "filename": blog_metadata.get("filename"),
         "title": blog_metadata.get("title"),
         "markdown": blog_data,
@@ -61,7 +61,6 @@ def delete_blog_data(blog_id: str) -> dict:
     """ Delete a blog and its associated metadata."""
 
     blog_dir = get_blog_dir(blog_id)
-    blog_metadata = read_metadata(blog_id)
 
     if not blog_dir.exists():
         raise FileNotFoundError("Blog not found.")
