@@ -2,7 +2,7 @@ import re
 
 from backend.models.state import State
 from backend.core.logging import logger
-from backend.core.settings import settings
+from backend.utils.metadata_utils import get_blog_dir
 
 
 def refiner_node(state: State) -> dict:
@@ -25,15 +25,26 @@ def refiner_node(state: State) -> dict:
     body = "\n\n".join(ordered_sections).strip()
 
     final_md = f"# {title}\n\n{body}\n"
+
+    blog_dir = get_blog_dir(state.blog_id)
+    blog_dir.mkdir(parents=True, exist_ok=True)
     
-    filename = title.lower().replace(" ", "_") + ".md"
-    output_path = settings.OUTPUT_DIR / filename
+    output_path = blog_dir / "blog.md"
     output_path.write_text(final_md, encoding="utf-8")
 
     logger.info("Saved markdown to: %s", output_path.resolve())
-    
     logger.debug("Final markdown length: %d characters", len(final_md))
-
     logger.info("Refiner node completed")
 
     return {"final": final_md}
+
+# if __name__ == "__main__":
+
+#     # Create a mock state for testing
+#     mock_state = State(
+#         blog_id="test_blog_id",
+#         sections=[]
+#     )
+
+#     result = refiner_node(mock_state)
+#     print(result)

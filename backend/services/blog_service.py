@@ -1,15 +1,19 @@
+import shutil
+
 from backend.core.settings import settings
-from backend.utils.metadata_utils import read_metadata
+from backend.utils.metadata_utils import get_blog_dir, read_metadata
 from backend.services.converter_service.html_converter import md_to_html
 # from backend.services.converter_service.pdf_converter import pdf_converter
 # from backend.services.converter_service.docx_converter import docx_converter
 
 
+def _get_blog_md_path(blog_id: str):
+    return get_blog_dir(blog_id) / "blog.md"
+
+
 def read_blog_data(blog_id: str) -> dict:
     blog_metadata = read_metadata(blog_id)
-
-    blog_filename = blog_metadata.get("filename")
-    blog_path = settings.OUTPUT_DIR / blog_filename
+    blog_path = _get_blog_md_path(blog_id)
 
     if not blog_path.exists():
         raise FileNotFoundError("Blog file not found.")
@@ -17,7 +21,7 @@ def read_blog_data(blog_id: str) -> dict:
     blog_data = blog_path.read_text(encoding="utf-8")
 
     return {
-        "blog_id": blog_metadata.get("blog_id"),
+        "blog_id": "blog_id",
         "filename": blog_metadata.get("filename"),
         "title": blog_metadata.get("title"),
         "markdown": blog_data,
@@ -27,15 +31,18 @@ def read_blog_data(blog_id: str) -> dict:
 def list_blog_data() -> list[dict]:
     blogs = []
 
-    metadata_files = sorted(
-        settings.OUTPUT_DIR.glob("*.json"),
+    blog_dirs = sorted(
+        [path for path in settings.OUTPUT_DIR.iterdir() if path.is_dir()],
         key=lambda item: item.stat().st_mtime,
         reverse=True,
     )
 
-    for path in metadata_files:
-        blog_id = path.stem
+    for blog_dir in blog_dirs:
+        blog_id = blog_dir.name
         metadata = read_metadata(blog_id)
+
+        if not metadata:
+            continue
 
         blogs.append(
             {
@@ -53,51 +60,49 @@ def list_blog_data() -> list[dict]:
 def delete_blog_data(blog_id: str) -> dict:
     """ Delete a blog and its associated metadata."""
 
-    metadata_path = settings.OUTPUT_DIR / f"{blog_id}.json"
+    blog_dir = get_blog_dir(blog_id)
     blog_metadata = read_metadata(blog_id)
 
-    blog_filename = blog_metadata.get("filename")
-    blog_path = settings.OUTPUT_DIR / blog_filename
-
-    if not blog_path.exists():
+    if not blog_dir.exists():
         raise FileNotFoundError("Blog not found.")
 
-    blog_path.unlink()
-
-    if metadata_path.exists():
-        metadata_path.unlink()
+    shutil.rmtree(blog_dir)
 
     return {
-        "filename": blog_path.name,
-        "metadata": str(metadata_path),
+        "filename": "blog.md",
+        "metadata": "metadata.json",
     }
 
 
 def export_blog_data(blog_id: str, output_format: str) -> tuple[bytes, str, str]:
     blog_metadata = read_metadata(blog_id)
+    blog_path = _get_blog_md_path(blog_id)
 
-    blog_filename = blog_metadata["filename"]
-    blog_path = settings.OUTPUT_DIR / blog_filename
+    if not blog_path.exists():
+        raise FileNotFoundError("Blog file not found.")
+
     blog_data = blog_path.read_text(encoding="utf-8")
 
-    filename = blog_filename.rsplit(".", 1)[0]
+    title = blog_metadata.get("title") or blog_id
+    download_stem = title.lower().replace(" ", "_")
+
 
     if output_format == "md":
         content = blog_data.encode("utf-8")
         media_type = "text/markdown"
-        download_name = f"{filename}.md"
+        download_name = f"{download_stem}.md"
 
     elif output_format == "html":
         html_data = md_to_html(blog_data)
         content = html_data.encode("utf-8")
         media_type = "text/html"
-        download_name = f"{filename}.html"
+        download_name = f"{download_stem}.html"
 
     # elif output_format == "pdf":
     #     pdf_bytes = pdf_converter(blog_data)
     #     content = pdf_bytes
     #     media_type = "application/pdf"
-    #     download_name = f"{filename}.pdf"
+    #     download_name = f"{download_stem}.pdf"
 
     # elif output_format == "docx":
     #     docx_bytes = docx_converter(blog_data)
@@ -105,7 +110,7 @@ def export_blog_data(blog_id: str, output_format: str) -> tuple[bytes, str, str]
     #     media_type = (
     #         "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
     #     )
-    #     download_name = f"{filename}.docx"
+    #     download_name = f"{download_stem}.docx"
 
     else:
         raise ValueError("Invalid output format.")

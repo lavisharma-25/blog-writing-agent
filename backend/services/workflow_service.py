@@ -36,15 +36,9 @@ def _get_plan_title(result: dict[str, Any]) -> str:
     raise ValueError("Workflow result is missing a blog title.")
 
 
-def _filename_from_title(title: str) -> str:
-    clean_title = re.sub(r"\.md$", "", title, flags=re.IGNORECASE)
-    clean_title = re.sub(r'[<>:"/\\|?*]', "", clean_title)
-
-    return clean_title.lower().replace(" ", "_") + ".md"
-
-
-def build_initial_state(topic: str) -> dict[str, Any]:
+def build_initial_state(topic: str, blog_id: str) -> dict[str, Any]:
     return {
+        "blog_id": blog_id,
         "topic": topic,
         "mode": "",
         "needs_research": False,
@@ -56,15 +50,17 @@ def build_initial_state(topic: str) -> dict[str, Any]:
     }
 
 
-def run_workflow(topic: str) -> dict[str, Any]:
-    state = build_initial_state(topic)
+def run_workflow(topic: str, blog_id: str) -> dict[str, Any]:
+    state = build_initial_state(topic=topic, blog_id=blog_id)
 
     workflow = get_workflow()
     return workflow.invoke(state)
 
 
 def generate_blog_data(request: WorkflowRequest) -> dict[str, Any]:
-    result = run_workflow(request.topic)
+    blog_id = f"{datetime.now().strftime('%Y%m%d-%H%M%S')}-{uuid.uuid4()}"
+
+    result = run_workflow(request.topic, blog_id)
     logger.debug("Workflow result: %s", result)
 
     plain_result = _to_plain(result)
@@ -73,17 +69,13 @@ def generate_blog_data(request: WorkflowRequest) -> dict[str, Any]:
     title = _get_plan_title(result)
     logger.debug("Title: %s", title)
 
-    filename = _filename_from_title(title)
-    logger.debug("Filename: %s", filename)
-
     created_at = datetime.now().isoformat(timespec="seconds")
-    blog_id = f"{datetime.now().strftime('%Y%m%d-%H%M%S')}-{uuid.uuid4()}"
 
     write_metadata(
         blog_id,
         {
             "title": title,
-            "filename": filename,
+            "filename": "blog.md",
             "created_at": created_at,
             "topic": request.topic,
             "audience": request.audience,
@@ -102,5 +94,5 @@ def generate_blog_data(request: WorkflowRequest) -> dict[str, Any]:
     return {
         **plain_result,
         "blog_id": blog_id,
-        "filename": filename,
+        "filename": "blog.md",
     }

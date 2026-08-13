@@ -6,6 +6,7 @@ from backend.models.schema.nodes import Plan, EvidenceItem
 
 
 class State(BaseModel):
+    blog_id: str
     topic: str
 
     # routing / research
