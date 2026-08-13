@@ -1,0 +1,270 @@
+{
+  "blog_id": "20260813-150633-dfc9bf97-5a9f-437f-ba54-8a1599630364",
+  "title": "How AI Coding Agents Are Changing Software Development",
+  "filename": "blog.md",
+  "created_at": "2026-08-13T15:14:30",
+  "topic": "How AI Coding Agents Are Changing Software Development",
+  "audience": "string",
+  "tone": "string",
+  "blog_kind": "explainer",
+  "research_mode": "auto",
+  "include_images": false,
+  "output_format": "md",
+  "mode": "hybrid",
+  "needs_research": true,
+  "queries": [
+    "AI coding agents landscape 2025",
+    "GitHub Copilot vs Cursor vs OpenAI Codex comparison",
+    "productivity impact of AI coding agents on developers",
+    "AI coding agents adoption in software engineering teams",
+    "future of software development with AI agents",
+    "latest AI coding agent features 2025"
+  ],
+  "sources": [
+    {
+      "title": "The AI Coding Tools Landscape: From No-Code to Agentic Assistants",
+      "url": "https://scientificfounder.substack.com/p/the-ai-coding-tools-landscape-from",
+      "published_at": null,
+      "snippet": "The AI coding tools landscape in 2025 is vast, rapidly evolving, and honestly, a bit overwhelming. There are dozens of tools, each with different capabilities, pricing models, and ideal use cases.",
+      "source": "Scientific Founder"
+    },
+    {
+      "title": "AI Agent Landscape 2025\u20132026: A Technical Deep Dive",
+      "url": "https://tao-hpu.medium.com/ai-agent-landscape-2025-2026-a-technical-deep-dive-abda86db7ae2",
+      "published_at": null,
+      "snippet": "The AI agent ecosystem has undergone a fundamental transformation in 2025, with all major AI companies shipping production-ready agent SDKs, a universal connectivity standard emerging through MCP, and context engineering replacing prompt engineering as the critical discipline.",
+      "source": "Medium"
+    },
+    {
+      "title": "AI Coding Agents: Market Developments, Risks and Developer Takeup",
+      "url": "https://acquinox.capital/insights/gen-ai-and-ai-agents/ai-coding-agents-market-developments-risks-and-developer-takeup",
+      "published_at": null,
+      "snippet": "The AI coding agent market showcases a fundamental reordering of how software gets built, who builds it, and where value concentrates in the technology stack. With the market estimated to be $7.37 billion in 2025 and forecast to reach ~$24 billion by 2030, institutional capital is flooding in.",
+      "source": "Acquinox Capital"
+    },
+    {
+      "title": "GitHub - joylarkin/AI-Coding-Landscape: AI coding models, agents, CLIs, IDEs, AI app builders, open source tooling, benchmarks \u00b7 GitHub",
+      "url": "https://github.com/joylarkin/AI-Coding-Landscape",
+      "published_at": null,
+      "snippet": "Windsurf - Agentic IDE acquired by Cognition (Dec 2025, ~$250M); Windsurf 2.0 (April 2026) adds Agent Command Center, Spaces, and Devin Cloud integration; Wave 13 brought free SWE-1.5",
+      "source": "GitHub"
+    },
+    {
+      "title": "AI Coding Landscape (June 2025)",
+      "url": "https://paradite.github.io/ai-coding",
+      "published_at": null,
+      "snippet": "AI Coding Landscape (June 2025). Note: Item positions within quadrants are arbitrary. Created by Zhu Liang (16x Prompt) using d3 and Cursor.",
+      "source": "Paradite"
+    },
+    {
+      "title": "The 2025 AI Agent Index",
+      "url": "https://aiagentindex.mit.edu",
+      "published_at": null,
+      "snippet": "Agents launched or received major agentic updates in 2024-2025, with releases accelerating sharply. Autonomy levels are rising in parallel. Chat agents maintain Level 1\u20133 autonomy with turn-based interaction.",
+      "source": "MIT"
+    },
+    {
+      "title": "Codex vs Cursor vs GitHub Copilot 2026 Compared",
+      "url": "https://tech-insider.org/au/codex-vs-cursor-vs-copilot-2026",
+      "published_at": null,
+      "snippet": "Three products now dominate the conversation whenever Australian developers ask which AI coding tool is worth the subscription: GitHub Copilot, Cursor, and OpenAI Codex. Copilot remains the default install for anyone already living inside GitHub.",
+      "source": "Tech Insider"
+    },
+    {
+      "title": "Challenges With Codex - Comparison with GitHub Copilot and Cursor - Codex - OpenAI Developer Community",
+      "url": "https://community.openai.com/t/challenges-with-codex-comparison-with-github-copilot-and-cursor/1358767",
+      "published_at": null,
+      "snippet": "Has anyone tried Visual Studio Code + GitHub Copilot (with gpt-5-codex) and compared it directly to using Codex itself (same model)? Yes GPT-5-codex in GitHub Copilot or Cursor works quite well. A lot of the difference people feel here is not raw model quality, it\u2019s whether the runtime knows when to stop.",
+      "source": "OpenAI Developer Community"
+    },
+    {
+      "title": "GitHub Copilot vs OpenAI Codex: Features & Verdict (2026)",
+      "url": "https://codegen.com/comparisons/copilot-vs-codex",
+      "published_at": null,
+      "snippet": "GitHub Copilot\u2019s code quality depends almost entirely on which model you pick from the picker. The product is a multi-model shell, not a single tuned agent. Run agent mode on a frontier model and it reaches 56% on SWE-bench Verified, which trails Claude Code but stays competitive with Cursor at 51.7% in the same test.",
+      "source": "Codegen"
+    },
+    {
+      "title": "OpenAI Codex vs GitHub Copilot: A Complete Guide | DataCamp",
+      "url": "https://www.datacamp.com/blog/codex-vs-github-copilot",
+      "published_at": null,
+      "snippet": "Despite sharing the same underlying engineering DNA, Codex and GitHub Copilot are fundamentally different products. Here\u2019s a detailed comparison across various critical factors. As of Q2 2026, GitHub has paused new individual sign-ups to manage the extreme compute demands of agentic features like /fleet.",
+      "source": "DataCamp"
+    },
+    {
+      "title": "Claude Code vs Cursor vs Codex vs Copilot, The | Clarista",
+      "url": "https://www.clarista.io/blog/claude-code-vs-cursor-vs-codex",
+      "published_at": null,
+      "snippet": "For autonomous, production-quality code generation: Claude Code (by a meaningful margin). For daily IDE development: Cursor (best DX). For 1000+ engineer organizations on a budget: GitHub Copilot (cheapest at scale). For organizations standardized on OpenAI: OpenAI Codex (native integration).",
+      "source": "Clarista"
+    },
+    {
+      "title": "GitHub Copilot vs Cursor : AI Code Editor Review for 2026 | DigitalOcean",
+      "url": "https://www.digitalocean.com/resources/articles/github-copilot-vs-cursor",
+      "published_at": null,
+      "snippet": "GitHub Copilot was launched in 2021 through a collaboration between GitHub and OpenAI. Initially built on OpenAI\u2019s Codex model, it now supports multiple advanced models like Claude 3 Sonnet and Gemini 2.5 Pro. In 2025, GitHub introduced new features that include Agent Mode and next edit suggestions.",
+      "source": "DigitalOcean"
+    },
+    {
+      "title": "Why AI Coding Agents Are Destroying Enterprise Developer Productivity - Development Corporate",
+      "url": "http://developmentcorporate.com/saas/ai-coding-agents-enterprise-productivity",
+      "published_at": null,
+      "snippet": "The data reveals a fundamental shift in how developers spend their time. Before AI coding agents, approximately 65% of a developer\u2019s day involved actually writing new code. With AI agents, that drops to just 25%\u2014with the difference absorbed by debugging AI output, re-providing context, and manual unblocking.",
+      "source": "Development Corporate"
+    },
+    {
+      "title": "AI isn\u2019t making developers more productive \u2013 it\u2019s making them busier - LeadDev",
+      "url": "https://leaddev.com/ai/ai-isnt-making-developers-more-productive-its-making-them-busier",
+      "published_at": null,
+      "snippet": "They found that the productivity increase at the granular level of writing code was undeniable. Early autocomplete tools boosted coding activity, as measured by commits, by 40%. Interactive sync agents that code alongside developers were even more effective, pushing the cumulative gain to 140%. Autonomous asynchronous agents raised it to 180%.",
+      "source": "LeadDev"
+    },
+    {
+      "title": "How AI Agents are Reshaping the Developer Experience",
+      "url": "https://devops.com/how-ai-agents-are-reshaping-the-developer-experience",
+      "published_at": null,
+      "snippet": "Our research shows that 92% of developers are looking to measure their productivity based on impact (i.e., contribution to business goals, user experience improvements and reduced incidents) over output (i.e., lines of code written and bugs fixed).",
+      "source": "DevOps.com"
+    },
+    {
+      "title": "The Productivity Paradox of AI Coding Assistants | Cerbos",
+      "url": "https://www.cerbos.dev/blog/productivity-paradox-of-ai-coding-assistants",
+      "published_at": null,
+      "snippet": "In 2024, researchers from MIT, Harvard, and Microsoft ran large-scale field experiments across three companies: Microsoft, Accenture, and a Fortune 100 firm. The sample covered 4,867 professional developers working on production code. With access to AI coding tools, developers completed 26.08% more tasks on average compared to the control group.",
+      "source": "Cerbos"
+    },
+    {
+      "title": "Examining the Use and Impact of an AI Code Assistant on Developer Productivity and Experience in the Enterprise | Proceedings of the Extended Abstracts of the CHI Conference on Human Factors in Computing Systems",
+      "url": "https://dl.acm.org/doi/10.1145/3706599.3706670",
+      "published_at": null,
+      "snippet": "Liang et al. examined a number of motivations for developers to use (or not use) AI programming assistants. Compared to their sample of AI code assistant users in the wild, our respondents were less interested in having a code autocompletion feature (47% vs. 86%) or finishing their programming tasks faster (59% vs. 76%).",
+      "source": "ACM DL"
+    },
+    {
+      "title": "The AI coding productivity data is in and it's not what anyone expected : r/ExperiencedDevs",
+      "url": "https://www.reddit.com/r/ExperiencedDevs/comments/1rnkv2t/the_ai_coding_productivity_data_is_in_and_its_not",
+      "published_at": null,
+      "snippet": "Then there's METR's study with experienced open-source contributors. 16 devs, 246 tasks in codebases they'd worked on for years. AI increased completion time by 19%. These devs predicted it would save them 24%. The perception gap is wild.",
+      "source": "Reddit"
+    },
+    {
+      "title": "Inside AI Adoption: Lessons from Enterprise Software Development Teams - Blog - Coder",
+      "url": "https://coder.com/blog/inside-ai-adoption-lessons-from-enterprise-software-development-teams",
+      "published_at": null,
+      "snippet": "Many enterprise software engineers we speak with remain skeptical that today\u2019s autonomous coding agents (or \u201cvibe coding\u201d) can be used to augment real work in day-to-day software engineering workflows. Software engineers often cite that agents need to be heavily supervised, and therefore are unproductive for long periods of time in the background.",
+      "source": "Coder"
+    },
+    {
+      "title": "AI Adoption in Software Engineering: A Leader\u2019s Evaluation Guide",
+      "url": "https://axify.io/blog/what-is-ai-adoption",
+      "published_at": null,
+      "snippet": "AI coding tools tend to be adopted fastest where delivery pressure is highest, because teams look for ways to reduce manual effort under tight deadlines. Surveys indicate that about 41% of code flowing through development workflows is now AI-generated.",
+      "source": "Axify"
+    },
+    {
+      "title": "Building an AI-Native Engineering Team | ChatGPT Learn",
+      "url": "https://learn.chatgpt.com/guides/build-ai-native-engineering-team",
+      "published_at": null,
+      "snippet": "AI coding agents give teams immediate, code-aware insights during planning and scoping. For example, teams may build workflows that connect coding agents to their issue-tracking systems to read a feature specification, cross-reference it against the codebase, and then flag ambiguities, break the work into subcomponents, or estimate difficulty.",
+      "source": "OpenAI"
+    },
+    {
+      "title": "Only 2% of teams are using AI agents \u2014 that\u2019s your advantage.",
+      "url": "https://medium.com/@fahimulhaq/only-2-of-teams-are-using-ai-agents-thats-your-advantage-5d0372d8d6e5",
+      "published_at": null,
+      "snippet": "Engineering orgs are racing to adopt AI. Over 90% of engineering teams now use some form of AI coding tool \u2014 up from just 61% last year. Meanwhile, only 2% of those teams have fully scaled AI agents into production.",
+      "source": "Medium"
+    },
+    {
+      "title": "How AI Agents Are Transforming Software Engineering and the Future of Product Development",
+      "url": "https://www.computer.org/csdl/magazine/co/2025/05/10970187/260SnIeoUUM",
+      "published_at": null,
+      "snippet": "The integration of AI agents into software development has led to impressive productivity gains, but it also introduces risks that could reshape the profession. As AI tools take on more complex tasks, engineers may face challenges that mirror historical shifts, like those seen with cloud computing.",
+      "source": "IEEE Computer Society"
+    },
+    {
+      "title": "AI adoption for engineering teams: a four-stage approach | Swarmia",
+      "url": "https://www.swarmia.com/blog/staged-approach-AI-adoption-for-engineering",
+      "published_at": null,
+      "snippet": "If you\u2019re searching for real and sustainable results from AI coding tools, this four-stage approach to AI adoption works. Don\u2019t skip stages because you\u2019re impatient, and don\u2019t let the hype convince you there\u2019s a shortcut.",
+      "source": "Swarmia"
+    },
+    {
+      "title": "The Future of AI in Software Development - The JetBrains Blog",
+      "url": "https://blog.jetbrains.com/ai/2025/07/the-future-of-ai-in-software-development",
+      "published_at": null,
+      "snippet": "We\u2019ve looked at current AI trends shaping software development and explored two vastly different AI-driven scenarios. Regardless of what the future holds, one thing is clear: AI will evolve from a supportive assistant into a proactive player in coding, testing, and analysis.",
+      "source": "JetBrains Blog"
+    },
+    {
+      "title": "AI Dev 26 x SF: Andrew Ng: The Future of Software Engineering",
+      "url": "https://www.youtube.com/watch?v=g8um2AEf5ZA",
+      "published_at": "2026-05-20",
+      "snippet": "At AI Dev 26 x San Francisco, Andrew Ng discussed the rapid evolution of software engineering driven by AI coding agents and introduced new tools to support this shift: The Shift in Software Development, New Bottlenecks and Generalist Skills, Job Market Perspective.",
+      "source": "YouTube"
+    },
+    {
+      "title": "What is the future of software engineering with AI?",
+      "url": "https://www.linkedin.com/posts/christopherwalton_ai-agents-engineering-activity-7372323946601517056-w7DS",
+      "published_at": null,
+      "snippet": "The role of the software engineer will then shift to identifying requirements, prompting agents to perform tasks, and auditing outputs from the agents. In essence, a software engineer will manage a team of AI agents to perform their core job functions.",
+      "source": "LinkedIn"
+    },
+    {
+      "title": "| AKF Partners",
+      "url": "https://akfpartners.com/growth-blog/what-happens-when-ai-agents-take-over-software-product-development",
+      "published_at": null,
+      "snippet": "Let\u2019s assume a very likely and near-future scenario where AI agents will: Translate user stories into working code, Write unit and integration tests, Perform code reviews (even on AI-generated code), Deploy software across environments, Monitor, observe, and self-remediate runtime issues.",
+      "source": "AKF Partners"
+    },
+    {
+      "title": "How AI Coding Agents Will Change Your Job",
+      "url": "https://www.youtube.com/watch?v=TECDj4JUx7o",
+      "published_at": null,
+      "snippet": "YC's Tom Blomfield and David Lieb discuss how AI coding tools are transforming software development, why small, high-agency teams will be able to do what once took armies of engineers, and why there's never been a better time to start something new.",
+      "source": "YouTube"
+    },
+    {
+      "title": "AI Engineering Trends in 2025: Agents, MCP and Vibe Coding - The New Stack",
+      "url": "https://thenewstack.io/ai-engineering-trends-in-2025-agents-mcp-and-vibe-coding",
+      "published_at": "2025-12-22",
+      "snippet": "Although agents had been talked about last year, 2025 was when talk became action. It probably started when OpenAI launched Operator as a research preview on January 23, 2025. It was pitched as an AI agent capable of using its own web browser to perform tasks like filling in forms, making purchases, and scheduling appointments.",
+      "source": "The New Stack"
+    },
+    {
+      "title": "Best AI Coding Agents in 2026, Ranked - MightyBot",
+      "url": "https://mightybot.ai/blog/coding-ai-agents-for-accelerating-engineering-workflows",
+      "published_at": null,
+      "snippet": "Gemini CLI is Google\u2019s open-source AI coding agent that brings Gemini directly into the terminal. Launched June 2025, it offers free access to Gemini 3.1 Pro via a personal Google account, making it the most accessible high-capability coding agent available.",
+      "source": "MightyBot"
+    },
+    {
+      "title": "8 Best AI Coding Assistants [Updated May 2026] | Augment Code",
+      "url": "https://www.augmentcode.com/tools/8-top-ai-coding-assistants-and-their-best-use-cases",
+      "published_at": null,
+      "snippet": "The test generation impressed most during testing. Right-clicking a method and selecting 'Generate Tests' produced JUnit tests matching existing testing patterns: correct mock dependencies, the existing assertion style, and the should naming conventions. The Junie agent (launched April 2025) handles autonomous code tasks with planning, writing, refining, and testing.",
+      "source": "Augment Code"
+    },
+    {
+      "title": "The Best AI Coding Assistants | August 2025... interesting results",
+      "url": "https://www.youtube.com/watch?v=3C4TWUlkBMs",
+      "published_at": "2025-08-01",
+      "snippet": "Testing 19 different Coding agents including Augment Code, Claude Code, RooCode, and many more along with 5 different AI models: o3, Gemini 2.5 Pro, Claude 4 Sonnet, Qwen 3 Coder, and Kimi K2 this is by far the biggest series of testing I've done to date.",
+      "source": "YouTube"
+    },
+    {
+      "title": "Best AI Coding Agents for 2026: Real-World Developer ...",
+      "url": "https://www.faros.ai/blog/best-ai-coding-agents-2026",
+      "published_at": null,
+      "snippet": "Copilot continues to dominate by sheer presence. For many developers, especially those working for companies considered 'Microsoft shops', it\u2019s already installed, approved, and integrated into existing workflows. In 2025, the conversation shifted away from basic autocomplete and toward Copilot\u2019s newer agent and workspace features.",
+      "source": "Faros AI"
+    },
+    {
+      "title": "Testing AI coding agents (2025): Cursor vs. Claude, OpenAI, and Gemini | Render Blog",
+      "url": "https://render.com/blog/ai-coding-agents-benchmark",
+      "published_at": null,
+      "snippet": "Until February 2025, I limited my AI exposure to the single-line auto-complete feature of GitHub Copilot, which saved me a bit of typing. However, its context collection was so poor that I really just treated it as a toy, not a productivity-enhancing tool.",
+      "source": "Render Blog"
+    }
+  ]
+}
