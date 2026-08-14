@@ -1,10 +1,10 @@
 import shutil
 
 from backend.core.settings import settings
-from backend.utils.metadata_utils import get_blog_dir, read_metadata
 from backend.services.converter_service.html_converter import md_to_html
 # from backend.services.converter_service.pdf_converter import pdf_converter
 # from backend.services.converter_service.docx_converter import docx_converter
+from backend.utils.metadata_utils import get_blog_dir, read_metadata, safe_title_name
 
 
 def _get_blog_md_path(blog_id: str):
@@ -83,7 +83,7 @@ def export_blog_data(blog_id: str, output_format: str) -> tuple[bytes, str, str]
     blog_data = blog_path.read_text(encoding="utf-8")
 
     title = blog_metadata.get("title") or blog_id
-    download_stem = title.lower().replace(" ", "_")
+    download_stem = safe_title_name(title)
 
 
     if output_format == "md":

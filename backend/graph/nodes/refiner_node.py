@@ -1,17 +1,13 @@
-import re
-
 from backend.models.state import State
 from backend.core.logging import logger
-from backend.utils.metadata_utils import get_blog_dir
+from backend.utils.metadata_utils import get_blog_dir, clean_title_text
 
 
 def refiner_node(state: State) -> dict:
 
     logger.info("Refiner node started")
     
-    title = state.plan.blog_title
-    title = re.sub(r"\.md$", "", title, flags=re.IGNORECASE)
-    title = re.sub(r'[<>:"/\\|?*]', "", title)
+    title = clean_title_text(state.plan.blog_title)
 
     logger.debug("Refiner sanitized title: %s", title)
 
@@ -37,14 +33,3 @@ def refiner_node(state: State) -> dict:
     logger.info("Refiner node completed")
 
     return {"final": final_md}
-
-# if __name__ == "__main__":
-
-#     # Create a mock state for testing
-#     mock_state = State(
-#         blog_id="test_blog_id",
-#         sections=[]
-#     )
-
-#     result = refiner_node(mock_state)
-#     print(result)

@@ -1,3 +1,4 @@
+import re
 import json
 from typing import Any
 
@@ -44,3 +45,15 @@ def write_metadata(blog_id: str, metadata: dict[str, Any]) -> None:
         json.dumps(payload, indent=2, default=str),
         encoding="utf-8",
     )
+
+
+def clean_title_text(title: str) -> str:
+    clean_title = re.sub(r"\.md$", "", title, flags=re.IGNORECASE)
+    clean_title = re.sub(r'[<>:"/\\|?*]', "", clean_title)
+    return clean_title.strip() or "Untitled Blog"
+
+
+def safe_title_name(title: str) -> str:
+    clean_title = clean_title_text(title)
+    clean_title = clean_title.lower().replace(" ", "_")
+    return clean_title or "blog"
