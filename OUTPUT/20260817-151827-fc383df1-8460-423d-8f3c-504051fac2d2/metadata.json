@@ -1,0 +1,342 @@
+{
+  "blog_id": "20260817-151827-fc383df1-8460-423d-8f3c-504051fac2d2",
+  "blog_path": "G:\\Learning\\blog-writing-agent\\OUTPUT\\20260817-151827-fc383df1-8460-423d-8f3c-504051fac2d2\\blog.md",
+  "title": "The State of Agentic AI in 2025: Challenges, Frameworks, and What Comes Next",
+  "created_at": "2026-08-17T15:27:09",
+  "topic": "The Current State of Agentic AI: Challenges, Frameworks, and Future Directions",
+  "audience": "string",
+  "tone": "string",
+  "blog_kind": "explainer",
+  "research_mode": "auto",
+  "include_images": false,
+  "output_format": "md",
+  "mode": "hybrid",
+  "needs_research": true,
+  "queries": [
+    "agentic AI challenges 2025",
+    "agentic AI frameworks comparison 2025",
+    "agentic AI future directions 2025",
+    "state of agentic AI 2025",
+    "agentic AI limitations and solutions",
+    "agentic AI tools and platforms 2025",
+    "agentic AI research papers 2025",
+    "agentic AI industry adoption 2025"
+  ],
+  "sources": [
+    {
+      "title": "Agentic AI Innovation Challenge 2025 - Ready Tensor",
+      "url": "https://www.readytensor.ai/agentic-ai-2025",
+      "published_at": null,
+      "snippet": "The Agentic AI Innovation Challenge celebrates groundbreaking developments in AI agent technologies and frameworks.",
+      "source": "Ready Tensor"
+    },
+    {
+      "title": "The 10 biggest agentic AI challenges and how to fix them",
+      "url": "https://sendbird.com/blog/agentic-ai-challenges",
+      "published_at": null,
+      "snippet": "Lack of clean, high-quality, and accessible data is a major driver of AI agent failure.",
+      "source": "Sendbird"
+    },
+    {
+      "title": "OpenOcean - The state of agentic AI in 2025: what\u2019s working, what isn\u2019t, and what\u2019s next",
+      "url": "https://www.openocean.vc/articles/the-state-of-agentic-ai-in-2025-whats-working-what-isnt-and-whats-next",
+      "published_at": null,
+      "snippet": "Agentic AI is not a passing trend - it\u2019s redefining how businesses are built.",
+      "source": "OpenOcean"
+    },
+    {
+      "title": "Adoption of AI and Agentic Systems: Value, Challenges, and Pathways",
+      "url": "https://cmr.berkeley.edu/2025/08/adoption-of-ai-and-agentic-systems-value-challenges-and-pathways",
+      "published_at": null,
+      "snippet": "The global autonomous agents market is calculated at $4.35 billion in 2025 and forecasted to reach $103.28 billion by 2034.",
+      "source": "California Management Review"
+    },
+    {
+      "title": "Agentic AI Trends 2025: From Assistants to Agents - Svitla Systems",
+      "url": "https://svitla.com/blog/agentic-ai-trends-2025",
+      "published_at": null,
+      "snippet": "Agentic AI systems pursue goals autonomously: they plan, call tools and APIs, coordinate with other agents, and act.",
+      "source": "Svitla Systems"
+    },
+    {
+      "title": "AI Agents in 2025: Expectations vs. Reality",
+      "url": "https://www.ibm.com/think/insights/ai-agents-2025-expectations-vs-reality",
+      "published_at": null,
+      "snippet": "Most organizations aren't agent-ready. What's going to be interesting is exposing the APIs that you have in your enterprises today.",
+      "source": "IBM"
+    },
+    {
+      "title": "Complete guide to agentic AI frameworks: Comparison ... - Moxo",
+      "url": "https://www.moxo.com/blog/agentic-ai-framework-comparison",
+      "published_at": null,
+      "snippet": "According to McKinsey's 2025 State of AI, only 23% of organizations are scaling agentic AI systems.",
+      "source": "Moxo"
+    },
+    {
+      "title": "Best AI Agent Frameworks in 2025: A Comprehensive Guide - Reddit",
+      "url": "https://www.reddit.com/r/AI_Agents/comments/1hq9il6/best_ai_agent_frameworks_in_2025_a_comprehensive",
+      "published_at": null,
+      "snippet": "The world of AI agent frameworks continues to expand and evolve, offering exciting new tools and capabilities.",
+      "source": "Reddit"
+    },
+    {
+      "title": "Top 5 Agentic AI Frameworks to Watch in 2026",
+      "url": "https://futureagi.substack.com/p/top-5-agentic-ai-frameworks-to-watch",
+      "published_at": null,
+      "snippet": "Gartner says 40% of enterprise apps will have task-specific AI agents baked in by end of 2026.",
+      "source": "FutureAGI"
+    },
+    {
+      "title": "The best AI agent frameworks in 2026",
+      "url": "https://www.langchain.com/resources/ai-agent-frameworks",
+      "published_at": null,
+      "snippet": "Microsoft Agent Framework is the unified successor to AutoGen and Semantic Kernel.",
+      "source": "LangChain"
+    },
+    {
+      "title": "Best Agentic AI Framework",
+      "url": "https://www.youtube.com/watch?v=Wr0AsdR-I3k",
+      "published_at": "2025-07-13",
+      "snippet": "There are many frameworks that allow you to build Agentic AI applications.",
+      "source": "YouTube"
+    },
+    {
+      "title": "Agentic AI frameworks for enterprise scale: A 2026 guide - Akka.io",
+      "url": "https://akka.io/blog/agentic-ai-frameworks",
+      "published_at": null,
+      "snippet": "In January 2025, Gartner found that 61% of organizations had begun their foray into agentic AI development.",
+      "source": "Akka.io"
+    },
+    {
+      "title": "Agentic AI Guide 2025: Architectures & Frameworks",
+      "url": "https://blog.sparrow.so/agentic-ai-the-complete-guide-to-architectures-frameworks-and-future-directions-2025",
+      "published_at": null,
+      "snippet": "Agentic AI represents a paradigm shift from passive AI tools to autonomous systems capable of goal-directed behavior.",
+      "source": "Sparrow"
+    },
+    {
+      "title": "Agentic AI 2025: Emerging Trends Every Business Leader Should Know",
+      "url": "https://medium.com/@kanerika/agentic-ai-2025-emerging-trends-every-business-leader-should-know-99efdfff7585",
+      "published_at": null,
+      "snippet": "Agentic AI systems can perceive, reason, and act with a degree of autonomy, making them far more adaptable to complex business environments.",
+      "source": "Medium"
+    },
+    {
+      "title": "Top 25 Agentic AI Use Cases in 2025 - ThirdEye Data",
+      "url": "https://thirdeyedata.ai/data-ai-industry-insights/top-25-agentic-ai-use-cases-in-2025",
+      "published_at": null,
+      "snippet": "The current focus has shifted to agentic AI, the kind of autonomous systems that actively pursue goals and execute complex workflows.",
+      "source": "ThirdEye Data"
+    },
+    {
+      "title": "Agentic AI: a comprehensive survey of architectures, applications, and ...",
+      "url": "https://link.springer.com/article/10.1007/s10462-025-11422-4",
+      "published_at": null,
+      "snippet": "Agentic AI systems are rapidly evolving beyond static task automation into dynamic, collaborative, and adaptive entities.",
+      "source": "Springer"
+    },
+    {
+      "title": "Agentic AI Is The Future - GEN AI Trends In 2025",
+      "url": "https://www.youtube.com/watch?v=9SD95yskEfU",
+      "published_at": null,
+      "snippet": "Agentic AI means creating autonomous AI agents which will be able to solve very complex workflows.",
+      "source": "YouTube"
+    },
+    {
+      "title": "The State of AI Report 2025 | AI Business Statistics | SS&C Blue Prism",
+      "url": "https://www.blueprism.com/the-state-of-ai-report",
+      "published_at": null,
+      "snippet": "29% of organizations claim to have adopted agentic AI for autonomous automation and 38% plan to roll it out in the next year.",
+      "source": "SS&C Blue Prism"
+    },
+    {
+      "title": "State of the Art of Agentic AI Transformation | Bain & Company",
+      "url": "https://www.bain.com/insights/state-of-the-art-of-agentic-ai-transformation-technology-report-2025",
+      "published_at": "2025-09-23",
+      "snippet": "Tech-forward enterprises have cracked the code on ROI for AI. Falling behind is riskier than ever as the next wave of agentic AI raises the stakes.",
+      "source": "Bain & Company"
+    },
+    {
+      "title": "The 2025 AI Agent Index",
+      "url": "https://aiagentindex.mit.edu",
+      "published_at": null,
+      "snippet": "The 2025 AI Agent Index documents the origins, design, capabilities, ecosystem, and safety features of 30 prominent AI agents.",
+      "source": "MIT"
+    },
+    {
+      "title": "State of the Agentic AI Market Report 2025 | ISG",
+      "url": "https://isg-one.com/advisory/artificial-intelligence-advisory/state-of-the-agentic-ai-market-report-2025",
+      "published_at": null,
+      "snippet": "70% of use cases/POCs in agentic AI came from BFSI, retail or manufacturing.",
+      "source": "ISG"
+    },
+    {
+      "title": "The State of Agentic AI in 2025: A Year End Reality Check - YouTube",
+      "url": "https://www.youtube.com/watch?v=JhGnm4nPO_E",
+      "published_at": "2025-12-30",
+      "snippet": "A deep dive into the significant developments in artificial intelligence and generative AI throughout 2025.",
+      "source": "YouTube"
+    },
+    {
+      "title": "Agentic AI Limitations: Data, Reliability, Security, Governance, Cost, Skills, Ethics",
+      "url": "https://www.linkedin.com/posts/gopalbehara_limitations-of-agentic-ai-understanding-activity-7413122666527748097-DOT9",
+      "published_at": null,
+      "snippet": "Autonomy without awareness of constraints leads to unsafe, unreliable, and ungoverned systems.",
+      "source": "LinkedIn"
+    },
+    {
+      "title": "Guide to Agentic Systems and AI Agents | Databricks Blog",
+      "url": "https://www.databricks.com/blog/agentic-systems-guide",
+      "published_at": null,
+      "snippet": "An agentic AI system is an autonomous, goal-driven platform that combines one or more AI agents with the infrastructure required to let those agents operate independently.",
+      "source": "Databricks"
+    },
+    {
+      "title": "Navigating the Challenges: 5 Common Pitfalls in Agentic AI\u2026 | CapTech",
+      "url": "https://www.captechconsulting.com/articles/navigating-the-challenges-5-common-pitfalls-in-agentic-ai-adoption",
+      "published_at": null,
+      "snippet": "Transformation failure can often be traced back to a lack of strong sponsorship and unclear or unrealistic expectations of success.",
+      "source": "CapTech"
+    },
+    {
+      "title": "9 Problems Preventing a Secure Agentic AI Future",
+      "url": "https://www.strata.io/blog/agentic-identity/9-problems-secure-agentic-ai-future-8a",
+      "published_at": null,
+      "snippet": "Legacy IAM was built for human users and static applications. Agentic AI breaks that model.",
+      "source": "Strata"
+    },
+    {
+      "title": "What is Agentic AI?",
+      "url": "https://www.ibm.com/think/topics/agentic-ai",
+      "published_at": null,
+      "snippet": "Agentic AI is an artificial intelligence system that can accomplish a specific goal with limited supervision.",
+      "source": "IBM"
+    },
+    {
+      "title": "What is Agentic AI and How It Works: 8 Real-World Use ...",
+      "url": "https://www.exabeam.com/explainers/ai-cyber-security/agentic-ai-how-it-works-and-7-real-world-use-cases",
+      "published_at": null,
+      "snippet": "Agentic AI presents several challenges, particularly regarding accountability, data privacy, and the risks of excessive reliance on autonomous decision-making.",
+      "source": "Exabeam"
+    },
+    {
+      "title": "Top Agentic AI Tools and Frameworks for 2025 | Anaconda",
+      "url": "https://www.anaconda.com/guides/agentic-ai-tools",
+      "published_at": null,
+      "snippet": "Agentic AI tools are software frameworks and platforms that enable developers to build autonomous AI systems capable of performing complex tasks independently.",
+      "source": "Anaconda"
+    },
+    {
+      "title": "7 best agentic AI platforms in 2026 | Enterprise market guide",
+      "url": "https://www.kore.ai/blog/7-best-agentic-ai-platforms",
+      "published_at": null,
+      "snippet": "Kore.ai supports advanced multi-agent orchestration through features such as agent collaboration, short- and long-term agent memory, agent tool access, and intelligent delegation.",
+      "source": "Kore.ai"
+    },
+    {
+      "title": "8 Best Agentic AI Tools in 2026 (Reviewed by Our Team) - Ajelix",
+      "url": "https://ajelix.com/ai/agentic-ai-tools",
+      "published_at": null,
+      "snippet": "The agentic AI market is projected to grow from $7.6 billion in 2025 to over $139 billion by 2034.",
+      "source": "Ajelix"
+    },
+    {
+      "title": "Best Agentic AI Tools for 2026: Complete Guide | AskUI Blog",
+      "url": "https://www.askui.com/blog-posts/top-10-agentic-ai-tools-for-test-automation-in-2025",
+      "published_at": "2025-10-15",
+      "snippet": "AI tools and frameworks have become increasingly sophisticated, enabling developers to create intelligent automation solutions.",
+      "source": "AskUI"
+    },
+    {
+      "title": "8 Best Agentic AI Tools in 2026 | Creatio",
+      "url": "https://www.creatio.com/glossary/agentic-ai-tools",
+      "published_at": null,
+      "snippet": "Leading platforms such as Creatio, Relevance AI, and Moveworks help businesses create custom AI agents and integrate them into existing systems.",
+      "source": "Creatio"
+    },
+    {
+      "title": "8 best agentic AI tools I'm using in 2026 (free + paid)",
+      "url": "https://www.gumloop.com/blog/agentic-ai-tools",
+      "published_at": null,
+      "snippet": "These agents can handle decision-making on their own, making them perfect for teams looking to scale AI initiatives.",
+      "source": "Gumloop"
+    },
+    {
+      "title": "Advances in Agentic AI: Insights from ICLR 2025 Papers",
+      "url": "https://www.paperdigest.org/report?id=advances-in-agentic-ai-insights-from-iclr-2025-papers",
+      "published_at": null,
+      "snippet": "ICLR 2025 showcased a remarkable array of breakthroughs in agentic AI, highlighting novel architectures and learning paradigms.",
+      "source": "Paper Digest"
+    },
+    {
+      "title": "Agentic AI: Autonomous Intelligence for Complex Goals\u2014A ...",
+      "url": "https://ieeexplore.ieee.org/document/10849561",
+      "published_at": "2025-01-22",
+      "snippet": "Agentic AI systems would be able to work side by side with humans and take on tasks that can reallocate human effort and increase productivity.",
+      "source": "IEEE"
+    },
+    {
+      "title": "AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges",
+      "url": "https://arxiv.org/abs/2505.10468",
+      "published_at": null,
+      "snippet": "A conceptual taxonomy of AI agents and agentic AI, including applications and challenges.",
+      "source": "arXiv"
+    },
+    {
+      "title": "10 Research Papers That Will Become the Agentic AI History",
+      "url": "https://gunjanvi.medium.com/10-research-papers-that-will-become-the-agentic-ai-history-801f9d60e709",
+      "published_at": null,
+      "snippet": "Various sets of research papers keep re-defining the architectural patterns that future AI systems will use to reason, plan, remember, collaborate, and act.",
+      "source": "Medium"
+    },
+    {
+      "title": "A collection of AI Agents papers (Updated biweekly) - GitHub",
+      "url": "https://github.com/masamasa59/ai-agent-papers",
+      "published_at": null,
+      "snippet": "A collection of AI agent papers, updated biweekly.",
+      "source": "GitHub"
+    },
+    {
+      "title": "Agentic AI \u2014 Industry Adoption, ROI & Framework Outlook (2025 \u2192 2026)",
+      "url": "https://www.linkedin.com/pulse/agentic-ai-industry-adoption-roi-framework-outlook-2025-navneet-dutt-dt2uc",
+      "published_at": null,
+      "snippet": "In 2025, Agentic AI adoption was largely characterized by experimentation and pilots.",
+      "source": "LinkedIn"
+    },
+    {
+      "title": "Why enterprise agentic AI adoption matters in 2025",
+      "url": "https://blog.superhuman.com/enterprise-agentic-ai-adoption",
+      "published_at": null,
+      "snippet": "33% of enterprise software will embed agentic AI capabilities by 2028.",
+      "source": "Superhuman"
+    },
+    {
+      "title": "Agentic AI Trends in 2026: Adoption, Market, and Future",
+      "url": "https://www.azilen.com/blog/agentic-ai-trends",
+      "published_at": null,
+      "snippet": "Agentic AI trends in 2026 show rapid adoption across North America, Europe, and Africa, with enterprises deploying specialized industry agents.",
+      "source": "Azilen"
+    },
+    {
+      "title": "Agentic AI adoption rate by industry 2030 | Statista",
+      "url": "https://www.statista.com/statistics/1656739/agentic-ai-adoption-rate-by-industry",
+      "published_at": null,
+      "snippet": "Expected agentic AI adoption rate by industry from 2025 to 2030.",
+      "source": "Statista"
+    },
+    {
+      "title": "Agentic AI adoption in finance by maturity and grouping | Statista",
+      "url": "https://www.statista.com/statistics/1661093/agentic-ai-adoption-finance-worldwide-by-maturity",
+      "published_at": null,
+      "snippet": "Breaking down agentic AI adoption maturity in financial services institutions across different dimensions.",
+      "source": "Statista"
+    },
+    {
+      "title": "Agentic AI adoption in financial services 2026 | Statista",
+      "url": "https://www.statista.com/statistics/1661091/agentic-ai-adoption-financial-services-worldwide",
+      "published_at": null,
+      "snippet": "52 percent of financial services institutions were piloting agentic AI or had reached more advanced deployment stages as of early 2026.",
+      "source": "Statista"
+    }
+  ]
+}
