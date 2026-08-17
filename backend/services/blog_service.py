@@ -4,16 +4,12 @@ from backend.core.settings import settings
 from backend.services.converter_service.html_converter import md_to_html
 # from backend.services.converter_service.pdf_converter import pdf_converter
 # from backend.services.converter_service.docx_converter import docx_converter
-from backend.utils.metadata_utils import get_blog_dir, read_metadata, safe_title_name
-
-
-def _get_blog_md_path(blog_id: str):
-    return get_blog_dir(blog_id) / "blog.md"
+from backend.utils.metadata_utils import get_blog_dir, get_blog_path, read_metadata, safe_title_name
 
 
 def read_blog_data(blog_id: str) -> dict:
     blog_metadata = read_metadata(blog_id)
-    blog_path = _get_blog_md_path(blog_id)
+    blog_path = get_blog_path(blog_id)
 
     if not blog_path.exists():
         raise FileNotFoundError("Blog file not found.")
@@ -22,7 +18,7 @@ def read_blog_data(blog_id: str) -> dict:
 
     return {
         "blog_id": blog_id,
-        "filename": blog_metadata.get("filename"),
+        "blog_path": blog_metadata.get("blog_path"),
         "title": blog_metadata.get("title"),
         "markdown": blog_data,
     }
@@ -47,7 +43,7 @@ def list_blog_data() -> list[dict]:
         blogs.append(
             {
                 "blog_id": blog_id,
-                "filename": metadata.get("filename"),
+                "blog_path": metadata.get("blog_path"),
                 "title": metadata.get("title"),
                 "user_query": metadata.get("topic"),
                 "created_at": metadata.get("created_at") or None,
@@ -68,14 +64,14 @@ def delete_blog_data(blog_id: str) -> dict:
     shutil.rmtree(blog_dir)
 
     return {
-        "filename": "blog.md",
-        "metadata": "metadata.json",
+        "blog_id": blog_id,
+        "message": f"Blog '{blog_id}' deleted successfully.",
     }
 
 
 def export_blog_data(blog_id: str, output_format: str) -> tuple[bytes, str, str]:
     blog_metadata = read_metadata(blog_id)
-    blog_path = _get_blog_md_path(blog_id)
+    blog_path = get_blog_path(blog_id)
 
     if not blog_path.exists():
         raise FileNotFoundError("Blog file not found.")

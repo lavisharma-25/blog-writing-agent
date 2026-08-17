@@ -1,4 +1,3 @@
-import re
 import uuid
 from typing import Any
 from datetime import datetime
@@ -8,7 +7,7 @@ from pydantic import BaseModel
 from backend.core.logging import logger
 from backend.graph.builder import get_workflow
 from backend.models.schema.workflow import WorkflowRequest
-from backend.utils.metadata_utils import write_metadata
+from backend.utils.metadata_utils import get_blog_path, write_metadata
 
 
 def _to_plain(value: Any) -> Any:
@@ -71,28 +70,30 @@ def generate_blog_data(request: WorkflowRequest) -> dict[str, Any]:
 
     created_at = datetime.now().isoformat(timespec="seconds")
 
-    write_metadata(
-        blog_id,
-        {
-            "title": title,
-            "filename": "blog.md",
-            "created_at": created_at,
-            "topic": request.topic,
-            "audience": request.audience,
-            "tone": request.tone,
-            "blog_kind": request.blog_kind,
-            "research_mode": request.research_mode,
-            "include_images": request.include_images,
-            "output_format": request.output_format,
-            "mode": plain_result.get("mode"),
-            "needs_research": plain_result.get("needs_research"),
-            "queries": plain_result.get("queries", []),
-            "sources": plain_result.get("evidence", []),
-        },
-    )
+    blog_path = get_blog_path(blog_id)
+
+    metadata = {
+                "blog_id": blog_id,
+                "blog_path": blog_path,
+                "title": title,
+                "created_at": created_at,
+                "topic": request.topic,
+                "audience": request.audience,
+                "tone": request.tone,
+                "blog_kind": request.blog_kind,
+                "research_mode": request.research_mode,
+                "include_images": request.include_images,
+                "output_format": request.output_format,
+                "mode": plain_result.get("mode"),
+                "needs_research": plain_result.get("needs_research"),
+                "queries": plain_result.get("queries", []),
+                "sources": plain_result.get("evidence", []),
+    }
+
+    write_metadata(blog_id=blog_id, metadata=metadata)
 
     return {
         **plain_result,
         "blog_id": blog_id,
-        "filename": "blog.md",
+        "blog_path": blog_path,
     }

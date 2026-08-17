@@ -10,6 +10,10 @@ def get_blog_dir(blog_id: str):
     return settings.OUTPUT_DIR / blog_id
 
 
+def get_blog_path(blog_id: str):
+    return get_blog_dir(blog_id) / "blog.md"
+
+
 def get_metadata_path(blog_id: str):
     return get_blog_dir(blog_id) / "metadata.json"
 
@@ -34,15 +38,10 @@ def write_metadata(blog_id: str, metadata: dict[str, Any]) -> None:
     blog_dir = get_blog_dir(blog_id)
     blog_dir.mkdir(parents=True, exist_ok=True)
     
-    payload = {
-        "blog_id": blog_id,
-        **metadata,
-    }
-    
     path = get_metadata_path(blog_id)
 
     path.write_text(
-        json.dumps(payload, indent=2, default=str),
+        json.dumps(metadata, indent=2, default=str),
         encoding="utf-8",
     )
 
