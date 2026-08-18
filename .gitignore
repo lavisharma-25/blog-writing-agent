@@ -20,5 +20,4 @@ __pycache__/
 LOGS/
 frontend-old/
 
-graphify-out/
 graphify_run.ipynb
