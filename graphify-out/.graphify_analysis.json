@@ -1,0 +1,353 @@
+{
+  "communities": {
+    "0": [
+      "backend_app",
+      "backend_src_api_routers",
+      "backend_src_core_logging",
+      "backend_src_core_settings",
+      "backend_src_graph_builder",
+      "backend_src_graph_nodes",
+      "backend_src_graph_nodes_planner_node",
+      "backend_src_graph_nodes_refiner_node",
+      "backend_src_graph_nodes_researcher_node",
+      "backend_src_graph_nodes_router_node",
+      "backend_src_graph_nodes_writer_node",
+      "backend_src_graph_prompt",
+      "backend_src_graph_prompt_load_prompt",
+      "backend_src_graph_prompt_rationale_7",
+      "backend_src_graph_routers",
+      "backend_src_graph_routers_fanout",
+      "backend_src_graph_routers_route_next",
+      "backend_src_main",
+      "backend_src_models_state",
+      "backend_src_models_state_py_basemodel",
+      "backend_src_models_state_state",
+      "backend_src_services_llm_service",
+      "backend_src_services_web_search_service",
+      "backend_src_services_web_search_service_tavily_search",
+      "backend_test",
+      "backend_test_run_workflow",
+      "chatprompttemplate"
+    ],
+    "1": [
+      "backend_src_models_schema_delete",
+      "backend_src_models_schema_delete_deleteblogrequest",
+      "backend_src_models_schema_delete_deleteblogresponse",
+      "backend_src_models_schema_delete_py_basemodel",
+      "backend_src_models_schema_delete_rationale_12",
+      "backend_src_models_schema_delete_rationale_6",
+      "backend_src_models_schema_export",
+      "backend_src_models_schema_export_exportblogrequest",
+      "backend_src_models_schema_export_py_basemodel",
+      "backend_src_models_schema_export_rationale_6",
+      "backend_src_models_schema_init",
+      "backend_src_models_schema_list",
+      "backend_src_models_schema_list_bloglistresponse",
+      "backend_src_models_schema_list_py_basemodel",
+      "backend_src_models_schema_list_rationale_6",
+      "backend_src_models_schema_nodes",
+      "backend_src_models_schema_nodes_evidenceitem",
+      "backend_src_models_schema_nodes_evidencepack",
+      "backend_src_models_schema_nodes_plan",
+      "backend_src_models_schema_nodes_py_basemodel",
+      "backend_src_models_schema_nodes_rationale_28",
+      "backend_src_models_schema_nodes_rationale_43",
+      "backend_src_models_schema_nodes_rationale_53",
+      "backend_src_models_schema_nodes_rationale_62",
+      "backend_src_models_schema_nodes_rationale_8",
+      "backend_src_models_schema_nodes_routerdecision",
+      "backend_src_models_schema_nodes_task"
+    ],
+    "2": [
+      "backend_src_api_functions_delete_blog",
+      "backend_src_api_functions_delete_blog_delete_blog",
+      "backend_src_api_functions_delete_blog_rationale_10",
+      "backend_src_api_functions_export_blog",
+      "backend_src_api_functions_export_blog_export_blog",
+      "backend_src_api_functions_export_blog_rationale_12",
+      "backend_src_api_functions_init",
+      "backend_src_api_functions_list_blogs",
+      "backend_src_api_functions_list_blogs_list_blogs",
+      "backend_src_api_functions_read_blog",
+      "backend_src_api_functions_read_blog_read_blog",
+      "backend_src_services_converter_service_html_converter",
+      "backend_src_services_converter_service_html_converter_md_to_html",
+      "backend_src_utils_metadata_utils",
+      "backend_src_utils_metadata_utils_read_metadata",
+      "streamingresponse"
+    ],
+    "3": [
+      "backend_src_api_functions_generate_blog",
+      "backend_src_api_functions_generate_blog_filename_from_title",
+      "backend_src_api_functions_generate_blog_generate_blog",
+      "backend_src_api_functions_generate_blog_get_plan_title",
+      "backend_src_api_functions_generate_blog_py_any",
+      "backend_src_api_functions_generate_blog_rationale_39",
+      "backend_src_api_functions_generate_blog_rationale_67",
+      "backend_src_api_functions_generate_blog_run_workflow",
+      "backend_src_api_functions_generate_blog_to_plain",
+      "backend_src_utils_metadata_utils_py_any",
+      "backend_src_utils_metadata_utils_write_metadata"
+    ],
+    "4": [
+      "backend_src_api_functions_workflow",
+      "backend_src_api_functions_workflow_execute_workflow",
+      "backend_src_api_functions_workflow_rationale_36",
+      "backend_src_api_functions_workflow_rationale_8",
+      "backend_src_api_functions_workflow_run_workflow",
+      "backend_src_models_schema_workflow",
+      "backend_src_models_schema_workflow_py_basemodel",
+      "backend_src_models_schema_workflow_rationale_19",
+      "backend_src_models_schema_workflow_rationale_6",
+      "backend_src_models_schema_workflow_workflowrequest",
+      "backend_src_models_schema_workflow_workflowresponse"
+    ],
+    "5": [
+      "backend_src_services_llm_service_llmservice",
+      "backend_src_services_llm_service_llmservice_create_gemini",
+      "backend_src_services_llm_service_llmservice_create_llm",
+      "backend_src_services_llm_service_llmservice_create_openai",
+      "backend_src_services_llm_service_llmservice_create_openrouter",
+      "backend_src_services_llm_service_llmservice_init",
+      "backend_src_services_llm_service_py_any",
+      "chatgooglegenerativeai",
+      "chatopenai",
+      "chatopenrouter"
+    ],
+    "6": [
+      "backend_src_api_functions_get_logs",
+      "backend_src_api_functions_get_logs_get_logs",
+      "backend_src_api_functions_get_logs_rationale_9",
+      "backend_src_models_schema_logs",
+      "backend_src_models_schema_logs_logsrequest",
+      "backend_src_models_schema_logs_logsresponse",
+      "backend_src_models_schema_logs_py_basemodel",
+      "backend_src_models_schema_logs_rationale_12",
+      "backend_src_models_schema_logs_rationale_6"
+    ],
+    "7": [
+      "backend_src_core_settings_get_settings",
+      "backend_src_core_settings_rationale_109",
+      "backend_src_core_settings_rationale_11",
+      "backend_src_core_settings_rationale_153",
+      "backend_src_core_settings_rationale_94",
+      "backend_src_core_settings_settings",
+      "backend_src_core_settings_settings_create_directories",
+      "backend_src_core_settings_settings_resolve_openai_config",
+      "basesettings"
+    ],
+    "8": [
+      "backend_src_api_functions_health",
+      "backend_src_api_functions_health_health_check",
+      "backend_src_api_functions_health_rationale_6",
+      "backend_src_models_schema_health",
+      "backend_src_models_schema_health_healthresponse",
+      "backend_src_models_schema_health_py_basemodel",
+      "backend_src_models_schema_health_rationale_6"
+    ],
+    "9": [
+      "backend_src_api_functions_get_providers",
+      "backend_src_api_functions_get_providers_get_providers",
+      "backend_src_models_schema_provider",
+      "backend_src_models_schema_provider_providersresponse",
+      "backend_src_models_schema_provider_py_basemodel",
+      "backend_src_models_schema_provider_rationale_6"
+    ],
+    "10": [
+      "backend_src_core_logging_get_logger",
+      "backend_src_core_logging_log_file",
+      "backend_src_core_logging_rationale_45",
+      "backend_src_core_logging_rationale_57",
+      "logger",
+      "path"
+    ],
+    "11": [
+      "backend_src_models_schema_read",
+      "backend_src_models_schema_read_py_basemodel",
+      "backend_src_models_schema_read_rationale_12",
+      "backend_src_models_schema_read_rationale_6",
+      "backend_src_models_schema_read_readblogrequest",
+      "backend_src_models_schema_read_readblogresponse"
+    ],
+    "12": [
+      "backend_src_services_converter_service_docx_converter",
+      "backend_src_services_converter_service_docx_converter_md_to_docx"
+    ],
+    "13": [
+      "backend_src_services_converter_service_pdf_converter",
+      "backend_src_services_converter_service_pdf_converter_md_to_pdf"
+    ],
+    "14": [
+      "backend_src_api_endpoints_blogs"
+    ],
+    "15": [
+      "backend_src_api_endpoints_system"
+    ],
+    "16": [
+      "backend_src_api_endpoints_workflow"
+    ],
+    "17": [
+      "frontend_test"
+    ],
+    "18": [
+      "pkg_blog_writing_agent"
+    ]
+  },
+  "cohesion": {
+    "0": 0.13105413105413105,
+    "1": 0.11396011396011396,
+    "2": 0.23333333333333334,
+    "3": 0.2909090909090909,
+    "4": 0.2727272727272727,
+    "5": 0.2,
+    "6": 0.2777777777777778,
+    "7": 0.25,
+    "8": 0.2857142857142857,
+    "9": 0.4,
+    "10": 0.3333333333333333,
+    "11": 0.4,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0
+  },
+  "gods": [
+    {
+      "id": "backend_src_models_state_state",
+      "label": "State",
+      "degree": 11
+    },
+    {
+      "id": "backend_src_utils_metadata_utils_read_metadata",
+      "label": "read_metadata()",
+      "degree": 10
+    },
+    {
+      "id": "backend_src_api_functions_generate_blog_generate_blog",
+      "label": "generate_blog()",
+      "degree": 9
+    },
+    {
+      "id": "backend_src_graph_prompt_load_prompt",
+      "label": "load_prompt()",
+      "degree": 8
+    },
+    {
+      "id": "backend_src_models_schema_workflow_workflowrequest",
+      "label": "WorkflowRequest",
+      "degree": 7
+    },
+    {
+      "id": "backend_src_models_schema_workflow_workflowresponse",
+      "label": "WorkflowResponse",
+      "degree": 7
+    },
+    {
+      "id": "backend_src_api_functions_export_blog_export_blog",
+      "label": "export_blog()",
+      "degree": 6
+    },
+    {
+      "id": "backend_src_core_settings_settings",
+      "label": "Settings",
+      "degree": 6
+    },
+    {
+      "id": "backend_src_models_schema_provider_providersresponse",
+      "label": "ProvidersResponse",
+      "degree": 6
+    },
+    {
+      "id": "backend_src_services_llm_service_llmservice",
+      "label": "LLMService",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "delete_blog()",
+      "target": "DeleteBlogRequest",
+      "source_files": [
+        "backend/src/api/functions/delete_blog.py",
+        "backend/src/models/schema/delete.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "delete_blog()",
+      "target": "DeleteBlogResponse",
+      "source_files": [
+        "backend/src/api/functions/delete_blog.py",
+        "backend/src/models/schema/delete.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "export_blog()",
+      "target": "ExportBlogRequest",
+      "source_files": [
+        "backend/src/api/functions/export_blog.py",
+        "backend/src/models/schema/export.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "generate_blog()",
+      "target": "WorkflowRequest",
+      "source_files": [
+        "backend/src/api/functions/generate_blog.py",
+        "backend/src/models/schema/workflow.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "generate_blog()",
+      "target": "WorkflowResponse",
+      "source_files": [
+        "backend/src/api/functions/generate_blog.py",
+        "backend/src/models/schema/workflow.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `LLMService` connect `Community 5` to `Community 0`?",
+      "why": "High betweenness centrality (0.107) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `ProvidersResponse` connect `Community 9` to `Community 1`?",
+      "why": "High betweenness centrality (0.063) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `blog-writing-agent` to the rest of the system?",
+      "why": "1 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.13105413105413105 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.11396011396011396 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
