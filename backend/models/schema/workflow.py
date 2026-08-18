@@ -1,5 +1,7 @@
 from pydantic import BaseModel, Field
-from typing import Any, Literal, Optional
+from typing import Literal, Optional
+
+from backend.models.schema.nodes import EvidenceItem, Plan
 
 
 class WorkflowRequest(BaseModel):
@@ -15,8 +17,21 @@ class WorkflowRequest(BaseModel):
     output_format: Literal["md", "html", "pdf", "docx"] = "md"
 
 
+class WorkflowData(BaseModel):
+    blog_id: str
+    blog_path: str
+    topic: str
+    mode: str
+    needs_research: bool
+    queries: list[str]
+    evidence: list[EvidenceItem]
+    plan: Plan | None
+    sections: list[tuple[int, str]]
+    final: str
+
+
 class WorkflowResponse(BaseModel):
     """Response returned after successful workflow execution."""
 
     status: Literal["success", "error"]
-    data: dict[str, Any]
+    data: WorkflowData

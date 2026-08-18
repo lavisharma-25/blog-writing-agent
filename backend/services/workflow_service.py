@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 from backend.core.logging import logger
 from backend.graph.builder import get_workflow
-from backend.models.schema.workflow import WorkflowRequest
+from backend.models.schema.workflow import WorkflowRequest, WorkflowData
 from backend.utils.metadata_utils import get_blog_path, write_metadata
 
 
@@ -56,7 +56,7 @@ def run_workflow(topic: str, blog_id: str) -> dict[str, Any]:
     return workflow.invoke(state)
 
 
-def generate_blog_data(request: WorkflowRequest) -> dict[str, Any]:
+def generate_blog_data(request: WorkflowRequest) -> WorkflowData:
     blog_id = f"{datetime.now().strftime('%Y%m%d-%H%M%S')}-{uuid.uuid4()}"
 
     result = run_workflow(request.topic, blog_id)
@@ -70,7 +70,7 @@ def generate_blog_data(request: WorkflowRequest) -> dict[str, Any]:
 
     created_at = datetime.now().isoformat(timespec="seconds")
 
-    blog_path = get_blog_path(blog_id)
+    blog_path = str(get_blog_path(blog_id))
 
     metadata = {
                 "blog_id": blog_id,
@@ -92,8 +92,8 @@ def generate_blog_data(request: WorkflowRequest) -> dict[str, Any]:
 
     write_metadata(blog_id=blog_id, metadata=metadata)
 
-    return {
+    return WorkflowData(
         **plain_result,
-        "blog_id": blog_id,
-        "blog_path": blog_path,
-    }
+        blog_id=blog_id,
+        blog_path=blog_path,
+    )

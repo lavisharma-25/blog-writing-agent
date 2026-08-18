@@ -1,5 +1,9 @@
 import shutil
 
+from backend.models.schema.read import ReadBlogData
+from backend.models.schema.list import BlogListData
+from backend.models.schema.delete import DeleteBlogData
+
 from backend.core.settings import settings
 from backend.services.converter_service.html_converter import md_to_html
 # from backend.services.converter_service.pdf_converter import pdf_converter
@@ -7,8 +11,10 @@ from backend.services.converter_service.html_converter import md_to_html
 from backend.utils.metadata_utils import get_blog_dir, get_blog_path, read_metadata, safe_title_name
 
 
-def read_blog_data(blog_id: str) -> dict:
+def read_blog_data(blog_id: str) -> ReadBlogData:
+
     blog_metadata = read_metadata(blog_id)
+
     blog_path = get_blog_path(blog_id)
 
     if not blog_path.exists():
@@ -16,15 +22,16 @@ def read_blog_data(blog_id: str) -> dict:
 
     blog_data = blog_path.read_text(encoding="utf-8")
 
-    return {
-        "blog_id": blog_id,
-        "blog_path": blog_metadata.get("blog_path"),
-        "title": blog_metadata.get("title"),
-        "markdown": blog_data,
-    }
+    return ReadBlogData(
+        blog_id=blog_id,
+        blog_path=str(blog_metadata.get("blog_path")) if blog_metadata.get("blog_path") else None,
+        title=blog_metadata.get("title"),
+        markdown=blog_data,
+    )
 
 
-def list_blog_data() -> list[dict]:
+def list_blog_data() -> list[BlogListData]:
+        
     blogs = []
 
     blog_dirs = sorted(
@@ -40,20 +47,20 @@ def list_blog_data() -> list[dict]:
         if not metadata:
             continue
 
-        blogs.append(
-            {
-                "blog_id": blog_id,
-                "blog_path": metadata.get("blog_path"),
-                "title": metadata.get("title"),
-                "user_query": metadata.get("topic"),
-                "created_at": metadata.get("created_at") or None,
-            }
+        blog_data = BlogListData(
+            blog_id=blog_id,
+            blog_path=str(metadata.get("blog_path")) if metadata.get("blog_path") else None,
+            title=metadata.get("title"),
+            user_query=metadata.get("topic"),
+            created_at=metadata.get("created_at") or None,
         )
+
+        blogs.append(blog_data)
 
     return blogs
 
 
-def delete_blog_data(blog_id: str) -> dict:
+def delete_blog_data(blog_id: str) -> DeleteBlogData:
     """ Delete a blog and its associated metadata."""
 
     blog_dir = get_blog_dir(blog_id)
@@ -63,10 +70,10 @@ def delete_blog_data(blog_id: str) -> dict:
 
     shutil.rmtree(blog_dir)
 
-    return {
-        "blog_id": blog_id,
-        "message": f"Blog '{blog_id}' deleted successfully.",
-    }
+    return DeleteBlogData(
+        blog_id=blog_id,
+        message=f"Blog '{blog_id}' deleted successfully.",
+    )
 
 
 def export_blog_data(blog_id: str, output_format: str) -> tuple[bytes, str, str]:
