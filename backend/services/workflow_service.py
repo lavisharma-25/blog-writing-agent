@@ -73,21 +73,21 @@ def generate_blog_data(request: WorkflowRequest) -> WorkflowData:
     blog_path = str(get_blog_path(blog_id))
 
     metadata = {
-                "blog_id": blog_id,
-                "blog_path": blog_path,
-                "title": title,
-                "created_at": created_at,
-                "topic": request.topic,
-                "audience": request.audience,
-                "tone": request.tone,
-                "blog_kind": request.blog_kind,
-                "research_mode": request.research_mode,
-                "include_images": request.include_images,
-                "output_format": request.output_format,
-                "mode": plain_result.get("mode"),
-                "needs_research": plain_result.get("needs_research"),
-                "queries": plain_result.get("queries", []),
-                "sources": plain_result.get("evidence", []),
+        "blog_id": blog_id,
+        "blog_path": blog_path,
+        "title": title,
+        "created_at": created_at,
+        "topic": request.topic,
+        "audience": request.audience,
+        "tone": request.tone,
+        "blog_kind": request.blog_kind,
+        "research_mode": request.research_mode,
+        "include_images": request.include_images,
+        "output_format": request.output_format,
+        "mode": plain_result.get("mode"),
+        "needs_research": plain_result.get("needs_research"),
+        "queries": plain_result.get("queries", []),
+        "sources": plain_result.get("evidence", []),
     }
 
     write_metadata(blog_id=blog_id, metadata=metadata)
