@@ -88,7 +88,6 @@ def export_blog_data(blog_id: str, output_format: str) -> tuple[bytes, str, str]
     title = blog_metadata.get("title") or blog_id
     download_stem = safe_title_name(title)
 
-
     if output_format == "md":
         content = blog_data.encode("utf-8")
         media_type = "text/markdown"

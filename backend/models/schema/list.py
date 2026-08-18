@@ -1,4 +1,4 @@
-from typing import List, Literal
+from typing import Literal
 from pydantic import BaseModel
 
 
@@ -14,4 +14,4 @@ class BlogListResponse(BaseModel):
     """Generated blog listing response."""
 
     status: Literal["success", "error"]
-    data: List[BlogListData]
+    data: list[BlogListData]
